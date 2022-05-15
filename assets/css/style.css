@@ -1,0 +1,9 @@
+/* Reset css */
+@import url(./default/reset.css);
+
+
+/* CSS dos componentes */
+@import url(./components/arquivo-1.css);
+@import url(./components/arquivo-2.css);
+@import url(./components/arquivo-3.css);
+@import url(./components/arquivo-4.css);

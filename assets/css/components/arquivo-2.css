@@ -1,0 +1,6 @@
+/* Importação variáveis */
+@import url(../default/vars.css);
+
+.arquivo-2 {
+  background-color: var(--var-test__arquivo-2);
+}
