@@ -1,6 +1,7 @@
 # Acelera iCarros Tech - Flavin do Pneu
 
 ![Logo Equipe](readme-img/flavin.png)
+
 ## Introdução
 
 Projeto realizado durante o [<"acelera"><"iCarros_Tech">](https://aceleraicarrostech.corporate.gama.academy/), programa de aceleração feito em parceria de [Gama Academy](https://www.gama.academy/) e o [iCarros](https://www.icarros.com.br/principal/index.jsp).
