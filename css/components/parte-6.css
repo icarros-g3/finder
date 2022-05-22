@@ -10,6 +10,8 @@
 
 .accessories-section {
   width: 1296px;
+  height: 280px;
+  padding: 0;
   background-color: var(--color-white-04);
   border-radius: var(--border-radius-lg);
   justify-content: center;
@@ -46,16 +48,44 @@
 
 .icon-chevron {
   background: url(../../assets/icons/chevron.svg) 0 0 no-repeat;
+  display: inline-block;
+  background-size: cover;
   width: 18px;
   height: 18px;
-  display: block;
-  content: "";
 }
 
 .item--image {
   height: 148px;
   width: 168px;
   margin: 0 14px
+}
+
+.icon-accessories {
+  width: 36px;
+  height: 36px;
+  background-color: var(--color-white-04);
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.icon-accessories:hover {
+  cursor: pointer;
+  background-color: var(--color-white);
+}
+
+.icon-accessories:hover > .icon-hover{
+  filter: var(--color-filter-orange);
+}
+
+.icon-accessories i {
+  width: 20px;
+  height: 20px;
+}
+
+.arrows-accessories {
+  width: 1296px;
+  align-items: flex-start;
+  gap: 16px;
 }
 
 .car-parts--itens {
@@ -200,4 +230,8 @@
 
 .gap-12 {
   gap: 12.7px;
+}
+
+.rotate {
+  transform: rotate(180deg);
 }

@@ -53,6 +53,7 @@
     --color-gradient-second: #FD5631;
     --color-gradient-circle: 26.21deg, var(--color-gradient-first) 0%, var(--color-gradient-second) 108.88%;
     --color-gradient-button: 180deg, rgba(69, 64, 86, 0.765) 0%, rgba(69, 64, 86, 0.9) 100%;
+    --color-filter-orange : brightness(0) saturate(100%) invert(48%) sepia(51%) saturate(4780%) hue-rotate(342deg) brightness(101%) contrast(99%);
 
     /* OPACITY  
     --opacity-link: 0.7; */
