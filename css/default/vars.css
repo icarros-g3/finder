@@ -51,6 +51,7 @@
     --color-gray-100: #F9F8FA;
     --color-gradient-first: #5D3CF2;
     --color-gradient-second: #FD5631;
+    --color-gradient-circle: 26.21deg, var(--color-gradient-first) 0%, var(--color-gradient-second) 108.88%;
     --color-gradient-button: 180deg, rgba(69, 64, 86, 0.765) 0%, rgba(69, 64, 86, 0.9) 100%;
 
     /* OPACITY  
