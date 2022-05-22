@@ -1,0 +1,82 @@
+/* Importação variáveis */
+@import url(../default/vars.css);
+
+.main-content {
+  color: var(--color-text);
+}
+
+.article-title {
+  font-size: var(--font-size-h2);
+}
+
+.article-content {
+  font-size: var(--font-size-lg);
+  color: var(--color-white-70);
+}
+
+.item--image {
+  height: 148px;
+  width: 168px;
+}
+
+.store-button {
+  width: 201px;
+  height: 64px;
+  background: linear-gradient(var(--color-gradient-button));
+  box-shadow: var(--shadow-large);
+  border: 1px solid var(--color-gray-800);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.gap-17 {
+  gap: 17px;
+}
+
+.gap-12 {
+  gap: 12.7px;
+}
+
+.button--subtitle {
+  font-size: var(--font-size-sm);
+}
+
+.button--title {
+  margin-top: -6px;
+  font-size: var(--font-size-h4);
+}
+
+.icon-store {
+  display: block;
+  content: '';
+  padding: 17px;
+}
+
+.icon-apple {
+  background: url(../../assets/icons/apple.svg) 0 0 no-repeat;
+  width: 27px;
+  height: 35px;
+}
+
+.icon-google {
+  background: url(../../assets/icons/google.svg) 0 0 no-repeat;
+  width: 30px;
+  height: 34px;
+}
+
+.app-stores {
+  gap: 24px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.center-content {
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
