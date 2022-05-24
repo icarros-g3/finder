@@ -1,0 +1,19 @@
+{
+  "name": "finder",
+  "version": "1.0.0",
+  "description": "ICarros Academy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/icarros-g3/finder.git"
+  },
+  "author": "g3 - Flavin do Pneu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/icarros-g3/finder/issues"
+  },
+  "homepage": "https://github.com/icarros-g3/finder#readme"
+}

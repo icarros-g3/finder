@@ -1,6 +1,17 @@
 /* Reset css */
 @import url(./default/reset.css);
 
+/* Helpers css */
+@import url(./default/helpers.css);
+
+/* Header - Navbar */
+@import url(./components/header.css);
+
+/* Main - Banner */
+@import url(./components/banner.css);
+
+/* Main - Searchbar */
+@import url(./components/searchbar.css);
 
 /* CSS dos componentes */
 @import url(./components/example.css);

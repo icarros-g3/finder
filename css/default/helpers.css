@@ -1,0 +1,47 @@
+/********** HELPER CLASSES **********/
+.center-page-content {
+  padding: 0 24px;
+  margin: 0 auto;
+  max-width: var(--main-width);
+  width: 100%;
+}
+
+.center-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/********** HELPER CLASSES **********/
+
+/* NEW-BTN-TOGGLE && USED-BTN-TOGGLE */
+.new-btn--toggle,
+.used-btn--toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.new-btn--toggle label,
+.used-btn--toggle label {
+  padding: 8px 16px;
+  border: none;
+  border-radius: var(--border-radius-base);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-base);
+  color: var(--color-text-primary);
+  background-color: var(--color-white-040);
+  user-select: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in, color 0.2s ease-in, box-shadow 0.2s ease-in;
+}
+.new-btn--toggle input,
+.used-btn--toggle input {
+  display: none;
+}
+.new-btn--toggle input:checked + label,
+.used-btn--toggle input:checked + label {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  box-shadow: var(--shadow-large);
+}
+/* NEW-BTN-TOGGLE && USED-BTN-TOGGLE */

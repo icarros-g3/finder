@@ -1,0 +1,122 @@
+/********** HEADER **********/
+.header {
+  padding-top: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.header .logo-container {
+  margin-right: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header .logo-container img {
+  width: 116px;
+}
+
+.header .navbar {
+  display: flex;
+  flex: 1 1 100%;
+}
+
+.header .navbar .navbar-list {
+  display: flex;
+  align-items: center;
+  flex: 1 1 100%;
+}
+
+.header .navbar .navbar-list::before {
+  content: '';
+  height: 24px;
+  border: 1px solid var(--color-white-150);
+}
+
+.header .navbar .navbar-list .navbar-item {
+  margin-left: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.header .navbar .navbar-link {
+  display: flex;
+  align-items: center;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-sm);
+  color: var(--color-white-700);
+  -webkit-transition: color 0.2s ease-in, text-decoration 0.2s ease-in;
+  -moz-transition: color 0.2s ease-in, text-decoration 0.2s ease-in;
+  -o-transition: color 0.2s ease-in, text-decoration 0.2s ease-in;
+  transition: color 0.2s ease-in, text-decoration 0.2s ease-in;
+}
+
+.header .navbar .navbar-link .icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.header .navbar .navbar-link .icon.user--icon {
+  background-color: var(--color-white-700);
+  mask-image: url(../../assets/icons/user-single.svg);
+  -webkit-mask-image: url(../../assets/icons/user-single.svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  -webkit-transition: color 0.2s ease-in, background-color 0.2s ease-in;
+  -moz-transition: color 0.2s ease-in, background-color 0.2s ease-in;
+  -o-transition: color 0.2s ease-in, background-color 0.2s ease-in;
+  transition: color 0.2s ease-in, background-color 0.2s ease-in;
+}
+
+.header .navbar .navbar-link .icon.plus--icon {
+  background-color: var(--color-white);
+  mask-image: url(../../assets/icons/plus.svg);
+  -webkit-mask-image: url(../../assets/icons/plus.svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  -webkit-transition: color 0.2s ease-in, background-color 0.2s ease-in;
+  -moz-transition: color 0.2s ease-in, background-color 0.2s ease-in;
+  -o-transition: color 0.2s ease-in, background-color 0.2s ease-in;
+  transition: color 0.2s ease-in, background-color 0.2s ease-in;
+}
+
+.header .navbar .navbar-link:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.header .navbar .navbar-link:hover .icon {
+  background-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.header .navbar .navbar-actions .navbar-btn {
+  display: flex;
+  align-items: center;
+  padding: 8px 20px;
+  margin-left: 32px;
+  border: none;
+  border-radius: var(--border-radius-base);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-sm);
+  color: var(--color-text-primary);
+  background-color: var(--color-primary);
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: color 0.2s ease-in, background-color 0.2s ease-in;
+  -moz-transition: color 0.2s ease-in, background-color 0.2s ease-in;
+  -o-transition: color 0.2s ease-in, background-color 0.2s ease-in;
+  transition: color 0.2s ease-in, background-color 0.2s ease-in;
+}
+
+.header .navbar .navbar-actions .navbar-btn:hover {
+  color: var(--color-primary);
+  background-color: var(--color-white);
+}
