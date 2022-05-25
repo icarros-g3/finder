@@ -1,31 +1,62 @@
-* {
+/* Variables */
+@import url(./vars.css);
+
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
-  border: none;
-  outline: none;
   box-sizing: border-box;
-  text-decoration: none;
+}
+
+html,
+body {
+  background-image: url(../../assets/images/banner-bg.svg);
+  background-position: top;
+  background-repeat: no-repeat;
 }
 
 html {
-  font-family: var(--font-family);
-  font-size: 62.5%;
+  height: 100%;
+  font-size: 62.5%; /* 10px */
+  color: var(--color-text-primary);
   scroll-behavior: smooth;
-  scroll-padding-top: 5.5rem;
-}
-
-main {
-  max-width: var(--max-width);
-  width: var(--main-width);
-  margin: 0 auto;
 }
 
 body {
-  background-color: var(--color-gray-900);
+  min-height: 100%;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-base);
+  background-color: var(--color-bg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-section{
-  padding-top: 8rem;
+input,
+button,
+select {
+  font-family: var(--font-family-primary);
+}
+
+input,
+textarea {
+  caret-color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button,
+select {
+  cursor: pointer;
 }
 
 img {

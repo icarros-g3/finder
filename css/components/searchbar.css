@@ -1,0 +1,136 @@
+/********** SEARCHBAR **********/
+.main .search .search-tabs {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.main .search .search-tabs > *:not(:last-child) {
+  margin-right: 12px;
+}
+
+.main .search .searchbar .searchbar-form {
+  display: flex;
+  align-items: center;
+  flex: 1 1 100%;
+  max-width: var(--main-width);
+  padding: 8px;
+  background: var(--color-white-040);
+  border: 1px solid var(--color-white-120);
+  border-radius: var(--border-radius-base);
+}
+
+.main .search .searchbar .searchbar-field {
+  display: flex;
+  flex: 1 1 100%;
+  align-items: center;
+  margin-left: 10px;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-base);
+  color: var(--color-white-500);
+}
+
+.main .search .searchbar .searchbar-field:not(:last-of-type)::after {
+  content: '';
+  height: 40px;
+  border: 1px solid var(--color-white-150);
+}
+
+.main .search .searchbar .searchbar-field .searchbar-field-icon {
+  width: 100%;
+  height: 20px;
+  max-width: 20px;
+  min-width: 20px;
+}
+
+.main .search .searchbar .searchbar-field .searchbar-field-icon.search--icon {
+  background-color: var(--color-white-500);
+  mask-image: url(../../assets/icons/search.svg);
+  -webkit-mask-image: url(../../assets/icons/search.svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+
+.main .search .searchbar .searchbar-field .searchbar-field-icon.star--icon {
+  background-color: var(--color-white-500);
+  mask-image: url(../../assets/icons/star.svg);
+  -webkit-mask-image: url(../../assets/icons/star.svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+
+.main .search .searchbar .searchbar-field .searchbar-field-icon.model--icon {
+  background-color: var(--color-white-500);
+  mask-image: url(../../assets/icons/list.svg);
+  -webkit-mask-image: url(../../assets/icons/list.svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+
+.main .search .searchbar .searchbar-field .searchbar-field-icon.car--icon {
+  background-color: var(--color-white-500);
+  mask-image: url(../../assets/icons/car.svg);
+  -webkit-mask-image: url(../../assets/icons/car.svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+
+.main .search .searchbar .searchbar-field .searchbar-field-icon.location--icon {
+  background-color: var(--color-white-500);
+  mask-image: url(../../assets/icons/pin.svg);
+  -webkit-mask-image: url(../../assets/icons/pin.svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+
+.main .search .searchbar .searchbar-field input,
+.main .search .searchbar .searchbar-field select {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  height: 40px;
+  margin-right: 20px;
+  width: 100%;
+  margin-left: 8px;
+}
+
+.main .search .searchbar .searchbar-field input {
+  padding: 0 10px;
+}
+
+.main .search .searchbar .search-btn {
+  padding: 14px 32px;
+  border: none;
+  border-radius: var(--border-radius-base);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-base);
+  color: var(--color-text-primary);
+  background-color: var(--color-primary);
+  user-select: none;
+  cursor: pointer;
+  -webkit-transition: color 0.2s ease-in, background-color 0.2s ease-in;
+  -moz-transition: color 0.2s ease-in, background-color 0.2s ease-in;
+  -o-transition: color 0.2s ease-in, background-color 0.2s ease-in;
+  transition: color 0.2s ease-in, background-color 0.2s ease-in;
+}
+
+.main .search .searchbar .search-btn:hover {
+  color: var(--color-primary);
+  background-color: var(--color-white);
+}

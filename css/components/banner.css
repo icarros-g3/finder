@@ -1,0 +1,39 @@
+/********** BANNER **********/
+.main .banner {
+  display: flex;
+  margin-top: 96px;
+  margin-bottom: 8px;
+}
+
+.main .banner .banner-info {
+  margin-right: 24px;
+  max-width: 526px;
+  width: 100%;
+}
+
+.main .banner .banner-info h1 {
+  font-size: var(--font-size-display);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-display);
+  color: var(--color-text-primary);
+  margin-bottom: 32px;
+}
+
+.main .banner .banner-info h2 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-lg);
+  color: var(--color-white-700);
+  width: 416px;
+}
+
+.main .banner .banner-image {
+  margin-top: 41px;
+  width: 100%;
+}
+
+.main .banner .banner-image,
+.main .banner .banner-image .image-container,
+.main .banner .banner-image .image-container img {
+  width: 100%;
+}
