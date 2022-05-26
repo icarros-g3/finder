@@ -13,5 +13,8 @@
 /* Main - Searchbar */
 @import url(./components/searchbar.css);
 
+/* Main - Types */
+@import url(./components/types.css);
+
 /* CSS dos componentes */
 @import url(./components/example.css);
