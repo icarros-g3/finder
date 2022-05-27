@@ -1,0 +1,205 @@
+/********** CARDS **********/
+.card {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.04);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+}
+
+.card .label {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
+
+.card .label .info {
+  display: inline-block;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  border-radius: var(--border-radius-sm);
+  padding: 0.1rem 1rem;
+  color: var(--color-white);
+  margin-bottom: 0.4rem;
+}
+
+.card .label .info-label {
+  background-color: var(--color-info);
+}
+
+.card .label .warning-label {
+  background-color: var(--color-warning);
+}
+
+.card .label .success-label {
+  background-color: var(--color-success);
+}
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  transition: all linear 0.3s;
+}
+
+.wrapper .slider {
+  /* max-height: 26.3rem; */
+  height: 100%;
+  overflow: hidden;
+}
+
+.wrapper .slider img {
+  display: none;
+}
+
+.wrapper .slider img.show {
+  display: block;
+}
+
+.wrapper .icons .wishlist {
+  position: absolute;
+  top: 2rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  box-shadow: var(--shadow-default);
+  color: var(--color-primary);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.wrapper .icons .wishlist,
+.wrapper .icons .arrow-right {
+  right: -5rem;
+}
+
+.wrapper .icons .arrow-left {
+  left: -5rem;
+}
+
+.wrapper:hover .icons .wishlist {
+  right: 2rem;
+}
+
+.wrapper .icons .arrow-left,
+.wrapper .icons .arrow-right {
+  width: 0.8rem;
+  height: 1.4rem;
+  color: var(--color-white);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.wrapper:hover .icons .arrow-left {
+  left: 1rem;
+}
+
+.wrapper:hover .icons .arrow-right {
+  right: 1rem;
+}
+
+.card .container {
+  padding: 2rem;
+}
+
+.card .container .content {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.15);
+  margin-bottom: 1.6rem;
+}
+
+.card .container .content .info {
+  flex: 1 1 70%;
+}
+
+.card .container .content .info span {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-white);
+  margin-bottom: 0.4rem;
+}
+
+.card .container .content .info span:nth-of-type(2) {
+  display: flex;
+  align-items: center;
+  opacity: 0.7;
+  margin-bottom: 1.6rem;
+}
+
+.card .container .content .info span:nth-of-type(2) .pin-market {
+  width: 1.8rem !important;
+  margin-right: 0.4rem;
+}
+
+.card .container .content .info h5 {
+  font-size: var(--font-size-lg);
+  color: var(--color-white);
+  opacity: 0.7;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 0.4rem;
+}
+
+.card .container .content .info p {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: 0.4rem;
+}
+
+.card .container .icons {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.card .container .icons .icon {
+  flex: 1 1 19rem;
+  background-color: var(--color-gray-900);
+  border-radius: var(--border-radius-base);
+  text-align: center;
+  padding: 0.8rem;
+}
+
+.card .container .icons .icon img {
+  width: 2.4rem;
+  height: 2.4rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.card .container .icons .icon span {
+  display: block;
+  font-size: 1.2rem;
+  color: var(--color-white);
+}
+
+/* BULLETS */
+.bullets {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.bullets span {
+  display: inline-block;
+  width: 1.6rem;
+  height: 0.6rem;
+  border-radius: 4rem;
+  background-color: var(--color-white);
+  opacity: 0.7;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.bullets span:first-child {
+  margin: 0;
+}
+
+.bullets span:hover {
+  opacity: 1;
+}
+
+.bullets span.active {
+  width: 3.2rem;
+  opacity: 1;
+}
