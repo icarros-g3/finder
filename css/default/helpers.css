@@ -45,3 +45,56 @@
   box-shadow: var(--shadow-large);
 }
 /* NEW-BTN-TOGGLE && USED-BTN-TOGGLE */
+
+/* CHECKBOX */
+.checkbox .chk {
+  display: block;
+  position: relative;
+  padding-left: 20px;
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  color: var(--color-white);
+}
+
+.checkbox .chk input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkbox .chk .check {
+  position: absolute;
+  width: 13.5px;
+  height: 13.5px;
+  border: 2px solid var(--color-white);
+  border-radius: 2px;
+  top: 3px;
+  left: 0;
+  opacity: 0.7;
+}
+
+.checkbox .chk input:checked ~ .check {
+  border: solid var(--color-primary);
+  opacity: 1;
+}
+
+.checkbox .chk .check:after {
+  top: 0px;
+  left: 2.5px;
+  height: 7px;
+  width: 5px;
+  border: solid var(--color-primary);
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox .check:after {
+  content: '';
+  display: none;
+  position: absolute;
+}
+
+.checkbox .chk input:checked ~ .check:after {
+  display: block;
+}
+/* CHECKBOX */

@@ -4,6 +4,9 @@
 /* Helpers css */
 @import url(./default/helpers.css);
 
+/* Cards css */
+@import url(./components/cards.css);
+
 /* Header - Navbar */
 @import url(./components/header.css);
 
@@ -15,6 +18,9 @@
 
 /* Main - Types */
 @import url(./components/types.css);
+
+/* Main - Ofertas */
+@import url(./components/ofertas.css);
 
 /* CSS dos componentes */
 @import url(./components/example.css);
