@@ -11,6 +11,23 @@
   align-items: center;
   justify-content: center;
 }
+
+.direction-column {
+  flex-direction: column;
+}
+
+.flex-gap {
+  display: flex;
+  gap: 24px;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.space-around {
+  justify-content: space-around;
+}
 /********** HELPER CLASSES **********/
 
 /* NEW-BTN-TOGGLE && USED-BTN-TOGGLE */

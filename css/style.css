@@ -22,5 +22,11 @@
 /* Main - Ofertas */
 @import url(./components/ofertas.css);
 
+/* Main - Icons Brands */
+@import url(./components/icon-brands.css);
+
+/* Main - Details */
+@import url(./components/details.css);
+
 /* CSS dos componentes */
 @import url(./components/example.css);
