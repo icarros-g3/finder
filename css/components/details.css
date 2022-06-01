@@ -1,0 +1,128 @@
+/********** DETAILS **********/
+.details-header {
+  padding: 0;
+}
+
+.details-header h3 {
+  font-size: var(--font-size-h3);
+}
+
+.details-header div {
+  opacity: 70%;
+}
+
+.section-header--link {
+  opacity: 70%;
+  font-size: var(--font-size-base)
+}
+
+.icon-arrow {
+  display: block;
+  content: '';
+  background: url(../../assets/icons/arrow.svg) 0 0 no-repeat;
+  height: 20px;
+  width: 20px;
+  margin-left: 8px;
+}
+
+.icon-details {
+  display: block;
+  content: '';
+  padding: 12px;
+  height: 24px;
+  width: 24px;
+}
+
+.icon-left {
+  margin-left: 16px;
+}
+
+.icon-right {
+  margin-right: 16px;
+}
+
+
+.icon-file {
+  background: url(../../assets/icons/file.svg) 0 0 no-repeat;
+}
+
+.icon-search {
+  background: url(../../assets/icons/search.svg) 0 0 no-repeat;
+}
+
+.icon-settings {
+  background: url(../../assets/icons/settings.svg) 0 0 no-repeat;
+}
+
+.icon-info {
+  background: url(../../assets/icons/info.svg) 0 0 no-repeat;
+}
+
+.icon-user {
+  background: url(../../assets/icons/user.svg) 0 0 no-repeat;
+}
+
+.icon-calculator {
+  background: url(../../assets/icons/calculator.svg) 0 0 no-repeat;
+}
+
+.details-container {
+  display: flex;
+  justify-content: center;
+  width: var(--max-content-width);
+}
+
+.details-partition {
+  margin: 0 82px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  margin-top: 73px;
+}
+
+.details--card {
+  display: flex;
+  align-items: flex-start;
+  width: 416px;
+  height: 73px;
+}
+
+.title-left {
+  align-items: flex-end;
+}
+
+.title-right {
+  align-items: flex-start;
+}
+
+.card--title {
+  font-size: var(--font-size-lg);
+}
+
+.card-left {
+  text-align: right;
+}
+
+.card--content {
+  opacity: 70%;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+}
+
+.auto-car {
+  position: relative;
+  top: -40px;
+  width: 80px;
+  height: 178px;
+}
+
+.road-line {
+  position: relative;
+  top: -60px;
+  height: 392px;
+  width: 2px;
+  background-image: url(../../assets/images/auto.svg);
+}

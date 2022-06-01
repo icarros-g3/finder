@@ -1,0 +1,62 @@
+/********** ICON-BRANDS **********/
+.icon-brand {
+  display: block;
+  content: '';
+  width: 86px;
+  height: 48px;
+  opacity: 40%;
+  transition: 0.5s;
+}
+
+.icon-brand:hover {
+  opacity: 100%;
+  cursor: pointer;
+}
+
+.icon-opel {
+  background: url(../../assets/icons/opel.svg) 0 0 no-repeat;
+}
+
+.icon-audi {
+  background: url(../../assets/icons/audi.svg) 0 0 no-repeat;
+}
+
+.icon-mercedes-benz {
+  background: url(../../assets/icons/mercedes-benz.svg) 0 0 no-repeat;
+}
+
+.icon-toyota {
+  background: url(../../assets/icons/toyota.svg) 0 0 no-repeat;
+}
+
+.icon-mazda {
+  background: url(../../assets/icons/mazda.svg) 0 0 no-repeat;
+}
+
+.icon-nissan {
+  background: url(../../assets/icons/nissan.svg) 0 0 no-repeat;
+}
+
+.icon-hyundai {
+  background: url(../../assets/icons/hyundai.svg) 0 0 no-repeat;
+}
+
+.icon-lexus {
+  background: url(../../assets/icons/lexus.svg) 0 0 no-repeat;
+}
+
+.icon-honda {
+  background: url(../../assets/icons/honda.svg) 0 0 no-repeat;
+}
+
+.icon-renault {
+  background: url(../../assets/icons/renault.svg) 0 0 no-repeat;
+}
+
+.icon-infiniti {
+  background: url(../../assets/icons/infiniti.svg) 0 0 no-repeat;
+}
+
+.icon-mitsubishi {
+  background: url(../../assets/icons/mitsubishi.svg) 0 0 no-repeat;
+}
