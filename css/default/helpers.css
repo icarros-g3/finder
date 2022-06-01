@@ -28,6 +28,10 @@
 .space-around {
   justify-content: space-around;
 }
+
+.margin-top-96 {
+  margin-top: 96px;
+}
 /********** HELPER CLASSES **********/
 
 /* NEW-BTN-TOGGLE && USED-BTN-TOGGLE */
