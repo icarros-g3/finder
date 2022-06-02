@@ -28,5 +28,9 @@
 /* Main - Details */
 @import url(./components/details.css);
 
+/* ---------------------------------------------------------------------- */
+/* Main - Accessories & App */
+@import url(./components/accessories-app.css);
+
 /* CSS dos componentes */
 @import url(./components/example.css);

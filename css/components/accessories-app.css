@@ -1,0 +1,26 @@
+/********** ACCESSORIES **********/
+.accessories-section {
+  width: var(--max-content-width);
+  height: 28rem;
+  padding: 0;
+  background-color: var(--color-white-040);
+  border-radius: var(--border-radius-lg);
+  gap: 86px;
+}
+
+.accessories {
+  width: 25.8rem;
+}
+
+.article-title {
+  font-size: var(--font-size-h2);
+}
+
+.article-content {
+  font-size: var(--font-size-lg);
+  color: var(--color-white-700);
+  width: 52.6rem;
+  line-height: var(--line-height-lg);
+  margin-top: 2.4rem;
+  margin-bottom: 4.8rem;
+}
