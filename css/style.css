@@ -28,5 +28,8 @@
 /* Main - Details */
 @import url(./components/details.css);
 
+/* Main - Ultimos */
+@import url(./components/ultimos.css);
+
 /* CSS dos componentes */
 @import url(./components/example.css);
