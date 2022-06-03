@@ -1,0 +1,264 @@
+/********** ACCESSORIES **********/
+.accessories-section {
+  width: var(--max-content-width);
+  height: 28rem;
+  padding: 0;
+  background-color: var(--color-white-040);
+  border-radius: var(--border-radius-lg);
+  margin-top: 7.2rem;
+  gap: 86px;
+}
+
+.accessories {
+  width: 25.8rem;
+}
+
+.article-title {
+  font-size: var(--font-size-h2);
+}
+
+.article-content {
+  font-size: var(--font-size-lg);
+  color: var(--color-white-700);
+  width: 52.6rem;
+  line-height: var(--line-height-lg);
+  margin-top: 2.4rem;
+  margin-bottom: 4.8rem;
+}
+
+
+.button-article {
+  background-color: var(--color-primary);
+  border-radius: var(--border-radius-base);
+  width: 15.8rem;
+  height: 4.4rem;
+  padding: 1rem 2.4rem;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+}
+
+.icon-chevron {
+  background: url(../../assets/icons/chevron.svg) 0 0 no-repeat;
+  display: inline-block;
+  background-size: cover;
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.icon-button {
+  background: url(../../assets/icons/searchw.svg) 0 0 no-repeat;
+  display: inline-block;
+  background-size: cover;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.icon-divider {
+  background: url(../../assets/icons/divider.svg) 0 0 no-repeat;
+  display: inline-block;
+  background-size: cover;
+  width: 2.8rem;
+  height: 0rem;
+  opacity: 40%;
+  border: 1px solid #FFFFFF;
+  transform: rotate(90deg);
+}
+
+.item--image {
+  height: 14.8rem;
+  width: 16.8rem;
+  margin: 0 1.4rem;
+}
+
+.icon-accessories {
+  width: 3.6rem;
+  height: 3.6rem;
+  background-color: var(--color-white-04);
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.icon-accessories:hover {
+  cursor: pointer;
+  background-color: var(--color-white);
+}
+
+.icon-accessories:hover > .icon-hover{
+  filter: var(--color-filter-orange);
+}
+
+.icon-accessories i {
+  width: 2.0rem;
+  height: 2.0rem;
+}
+
+.arrows-accessories {
+  width: var(--max-content-width);
+  align-items: flex-start;
+  gap: 1.6rem;
+}
+
+.car-parts--itens {
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.car-parts {
+  width: 85.6rem;
+  gap: 2.4rem;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  font-weight: var(--font-weight-bold);
+}
+
+.app-section {
+  margin-top: 3.3rem;
+  width: 107.6rem;
+  height: 44.0rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.store-button {
+  width: 20.1rem;
+  height: 6.4rem;
+  background: linear-gradient(var(--color-gradient-button));
+  box-shadow: var(--shadow-large);
+  border: 0.1rem solid var(--color-gray-800);
+  border-radius: var(--border-radius-base);
+  cursor: pointer;
+}
+
+
+.button--subtitle {
+  font-size: var(--font-size-sm);
+}
+
+.button--title {
+  margin-top: -0.6rem;
+  font-size: var(--font-size-h4);
+}
+
+.icon-store {
+  display: block;
+  content: "";
+  padding: 1.7rem;
+}
+
+.icon-apple {
+  background: url(../../assets/icons/apple.svg) 0 0 no-repeat;
+  width: 2.7rem;
+  height: 3.5rem;
+}
+
+.icon-google {
+  background: url(../../assets/icons/google.svg) 0 0 no-repeat;
+  width: 3.0rem;
+  height: 3.4rem;
+}
+
+.app-stores {
+  gap: 2.4rem;
+}
+
+.wrapper-phone {
+  width: 46.0rem;
+  height: 44.0rem;
+  position: relative;
+  z-index: 0;
+}
+
+.circle-bg {
+  background: linear-gradient(var(--color-gradient-circle));
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  height: 40.5rem;
+  width: 42.0rem;
+  z-index: 0;
+}
+.phone-shape {
+  position: absolute;
+  height: 44.0rem;
+  width: 24.8rem;
+}
+
+.phone-shape--background {
+  background: linear-gradient(180deg, #dfdbe3 48.81%, #807e87 100%);
+  border-radius: 3.0rem;
+  z-index: 1;
+}
+
+.phone-shape--border {
+  content: "";
+  background: url(../../assets/images/phone-border.svg) 0 0 no-repeat;
+  z-index: 2;
+}
+
+.phone--car {
+  content: "";
+  background-image: url(../../assets/images/car-phone.png) ;
+  background-size:  39.8rem 21.2rem;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: absolute;
+  width: 39.8rem;
+  height: 21.2rem;
+  top: 22.8rem;
+  right: 8.0rem;
+  z-index: 3;
+}
+
+.phone--text {
+  font-size: var(--font-size-h4);
+  color: var(--color-gray-900);
+  font-weight: var(--font-weight-bold);
+  line-height: 130%;
+  position: absolute;
+  text-align: center;
+  width: 19.2rem;
+  height: 9.3rem;
+  top: 3.2rem;
+  z-index: 3;
+}
+
+.button-phone {
+  justify-content: space-between;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-sm);
+  margin-top: 1.1rem;
+  width: 19.2rem;
+  z-index: 3;
+}
+
+.phone-end {
+  gap: 0.8rem
+}
+
+.button-container {
+  display: flex;
+  width: 16rem;
+  height: 2.8rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.gap-17 {
+  gap: 1.7rem;
+}
+
+.gap-12 {
+  gap: 1.27rem;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}

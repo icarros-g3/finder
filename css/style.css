@@ -28,6 +28,9 @@
 /* Main - Details */
 @import url(./components/details.css);
 
+/* Main - Accessories & App */
+@import url(./components/accessories-app.css);
+
 /* Main - Ultimos */
 @import url(./components/ultimos.css);
 
