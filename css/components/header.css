@@ -46,6 +46,9 @@
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-sm);
   color: var(--color-white-700);
+  text-decoration-color: transparent;
+  text-decoration-style: solid;
+  text-decoration-line: underline;
   -webkit-transition: color 0.2s ease-in, text-decoration 0.2s ease-in;
   -moz-transition: color 0.2s ease-in, text-decoration 0.2s ease-in;
   -o-transition: color 0.2s ease-in, text-decoration 0.2s ease-in;
