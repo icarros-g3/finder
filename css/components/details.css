@@ -1,28 +1,67 @@
 /********** DETAILS **********/
+.details-section {
+  margin-top: 96px;
+  position: relative;
+}
+
 .details-header {
   padding: 0;
+  margin-bottom: 72px;
 }
 
 .details-header h3 {
+  color: var(--color-white);
   font-size: var(--font-size-h3);
+  line-height: var(--line-height-h3);
+  font-weight: var(--font-weight-bold);
 }
 
-.details-header div {
-  opacity: 70%;
+.details-section--link {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-white-700);
+  text-decoration-color: transparent;
+  text-decoration-style: solid;
+  text-decoration-line: underline;
+  -webkit-transition: color 0.2s ease-in, text-decoration 0.2s ease-in;
+  -moz-transition: color 0.2s ease-in, text-decoration 0.2s ease-in;
+  -o-transition: color 0.2s ease-in, text-decoration 0.2s ease-in;
+  transition: color 0.2s ease-in, text-decoration 0.2s ease-in;
 }
 
-.section-header--link {
-  opacity: 70%;
-  font-size: var(--font-size-base)
+.details-section--link:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
 }
 
-.icon-arrow {
-  display: block;
-  content: '';
-  background: url(../../assets/icons/arrow.svg) 0 0 no-repeat;
+.details-section--link:hover .details-section--icon.arrow-right-icon {
+  background-color: var(--color-primary);
+}
+
+.details-section--link span {
+  margin-right: 8px;
+}
+
+.details-section--link .details-section--icon {
+  width: 100%;
   height: 20px;
-  width: 20px;
-  margin-left: 8px;
+  max-width: 20px;
+  min-width: 20px;
+}
+
+.details-section--link .details-section--icon.arrow-right-icon {
+  mask-image: url(../../assets/icons/arrow-pointing.svg);
+  -webkit-mask-image: url(../../assets/icons/arrow-pointing.svg);
+  background-color: var(--color-white-700);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  -webkit-transition: color 0.2s ease-in, background-color 0.2s ease-in;
+  -moz-transition: color 0.2s ease-in, background-color 0.2s ease-in;
+  -o-transition: color 0.2s ease-in, background-color 0.2s ease-in;
+  transition: color 0.2s ease-in, background-color 0.2s ease-in;
 }
 
 .icon-details {
@@ -40,7 +79,6 @@
 .icon-right {
   margin-right: 16px;
 }
-
 
 .icon-file {
   background: url(../../assets/icons/file.svg) 0 0 no-repeat;
@@ -69,25 +107,36 @@
 .details-container {
   display: flex;
   justify-content: center;
-  width: var(--max-content-width);
-}
-
-.details-partition {
-  margin: 0 82px;
+  max-width: var(--max-content-width);
+  width: 100%;
+  padding-bottom: 48px;
 }
 
 .details {
   display: flex;
   flex-direction: column;
   gap: 64px;
-  margin-top: 73px;
+}
+
+.details-left {
+  margin-right: 122px;
+}
+
+.details-right {
+  margin-left: 122px;
 }
 
 .details--card {
   display: flex;
   align-items: flex-start;
   width: 416px;
-  height: 73px;
+}
+
+.details--centered-car {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .title-left {
@@ -99,7 +148,11 @@
 }
 
 .card--title {
+  color: var(--color-white);
   font-size: var(--font-size-lg);
+  line-height: var(--line-height-lg);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 4px;
 }
 
 .card-left {
@@ -107,22 +160,22 @@
 }
 
 .card--content {
-  opacity: 70%;
+  color: var(--color-white-700);
   font-size: var(--font-size-sm);
   line-height: var(--line-height-sm);
+  font-weight: var(--font-weight-regular);
 }
 
 .auto-car {
   position: relative;
-  top: -40px;
+  top: 0;
   width: 80px;
   height: 178px;
+  z-index: 1;
 }
 
 .road-line {
   position: relative;
-  top: -60px;
-  height: 392px;
+  top: -10px;
   width: 2px;
-  background-image: url(../../assets/images/auto.svg);
 }

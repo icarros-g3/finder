@@ -41,6 +41,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .new-btn--toggle label,
 .used-btn--toggle label {
   padding: 8px 16px;
@@ -55,10 +56,12 @@
   cursor: pointer;
   transition: background-color 0.2s ease-in, color 0.2s ease-in, box-shadow 0.2s ease-in;
 }
+
 .new-btn--toggle input,
 .used-btn--toggle input {
   display: none;
 }
+
 .new-btn--toggle input:checked + label,
 .used-btn--toggle input:checked + label {
   background-color: var(--color-white);
@@ -67,63 +70,13 @@
 }
 /* NEW-BTN-TOGGLE && USED-BTN-TOGGLE */
 
-/* CHECKBOX */
-.checkbox .chk {
-  display: block;
-  position: relative;
-  padding-left: 20px;
-  cursor: pointer;
-  font-size: var(--font-size-sm);
-  color: var(--color-white);
-}
-
-.checkbox .chk input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.checkbox .chk .check {
-  position: absolute;
-  width: 13.5px;
-  height: 13.5px;
-  border: 2px solid var(--color-white);
-  border-radius: 2px;
-  top: 3px;
-  left: 0;
-  opacity: 0.7;
-}
-
-.checkbox .chk input:checked ~ .check {
-  border: solid var(--color-primary);
-  opacity: 1;
-}
-
-.checkbox .chk .check:after {
-  top: 0px;
-  left: 2.5px;
-  height: 7px;
-  width: 5px;
-  border: solid var(--color-primary);
-  border-width: 0 3px 3px 0;
-  transform: rotate(45deg);
-}
-
-.checkbox .check:after {
-  content: '';
-  display: none;
-  position: absolute;
-}
-
-.checkbox .chk input:checked ~ .check:after {
-  display: block;
-}
-/* CHECKBOX */
-
 /* STYLED-CHECKBOX */
 .styled-checkbox {
   cursor: pointer;
   user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .styled-checkbox .checkbox {
@@ -158,16 +111,22 @@
   -webkit-mask-size: cover;
   mask-size: cover;
 }
-/* STYLED-CHECKBOX */
 
 .styled-checkbox .checkbox-text {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+  font-weight: var(--font-weight-regular);
   margin-left: 4px;
 }
+/* STYLED-CHECKBOX */
 
 /* STYLED-TOGGLE */
 .styled-toggle {
   cursor: pointer;
   user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .styled-toggle .toggle-switch {
@@ -212,7 +171,10 @@
   display: none;
 }
 
-.styled-toggle .toggle-label {
+.styled-toggle .toggle-text {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+  font-weight: var(--font-weight-regular);
   margin-left: 8px;
   position: relative;
 }
