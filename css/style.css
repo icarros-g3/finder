@@ -39,3 +39,7 @@
 
 /* Footer */
 @import url(./components/footer.css);
+
+/* Interna carro */
+@import url(./components/car.css);
+

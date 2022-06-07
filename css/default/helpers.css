@@ -179,3 +179,17 @@
   position: relative;
 }
 /* STYLED-TOGGLE */
+.column {
+  display: flex;
+  flex-direction: column;
+  min-width: auto;
+}
+
+.row {
+  display: flex;
+  min-width: auto;
+}
+
+.space-between {
+  justify-content: space-between;
+}
