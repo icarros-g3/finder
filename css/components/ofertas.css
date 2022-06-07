@@ -1,4 +1,8 @@
 /********** OFERTAS **********/
+section.ofertas {
+  margin-top: 72px;
+}
+
 section.ofertas .headline {
   display: flex;
   justify-content: space-between;
@@ -9,26 +13,56 @@ section.ofertas .headline {
 section.ofertas .headline h3 {
   font-size: var(--font-size-h3);
   font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-h3);
   color: var(--color-white);
 }
 
-section.ofertas .headline p {
-  display: flex;
-  align-items: center;
-}
-
-section.ofertas .headline p a {
-  display: flex;
-  align-items: center;
+section.ofertas .headline .ofertas-section--link {
   font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
   font-weight: var(--font-weight-regular);
-  opacity: 0.7;
-  color: var(--color-white);
+  color: var(--color-white-700);
+  text-decoration-color: transparent;
+  text-decoration-style: solid;
+  text-decoration-line: underline;
+  -webkit-transition: color 0.2s ease-in, text-decoration 0.2s ease-in;
+  -moz-transition: color 0.2s ease-in, text-decoration 0.2s ease-in;
+  -o-transition: color 0.2s ease-in, text-decoration 0.2s ease-in;
+  transition: color 0.2s ease-in, text-decoration 0.2s ease-in;
 }
 
-section.ofertas .headline p a img {
-  width: 2rem;
-  margin-left: 0.8rem;
+section.ofertas .headline .ofertas-section--link:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+section.ofertas .headline .ofertas-section--link:hover .ofertas-section--icon.arrow-right-icon {
+  background-color: var(--color-primary);
+}
+
+section.ofertas .headline .ofertas-section--link span {
+  margin-right: 8px;
+}
+
+section.ofertas .headline .ofertas-section--link .ofertas-section--icon {
+  width: 100%;
+  height: 20px;
+  max-width: 20px;
+  min-width: 20px;
+}
+
+section.ofertas .headline .ofertas-section--link .ofertas-section--icon.arrow-right-icon {
+  mask-image: url(../../assets/icons/arrow-pointing.svg);
+  -webkit-mask-image: url(../../assets/icons/arrow-pointing.svg);
+  background-color: var(--color-white-700);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  -webkit-transition: color 0.2s ease-in, background-color 0.2s ease-in;
+  -moz-transition: color 0.2s ease-in, background-color 0.2s ease-in;
+  -o-transition: color 0.2s ease-in, background-color 0.2s ease-in;
+  transition: color 0.2s ease-in, background-color 0.2s ease-in;
 }
 
 section.ofertas .card-container {

@@ -1,4 +1,13 @@
 /********** ICON-BRANDS **********/
+.icon-brand-section div {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 96px;
+}
+
 .icon-brand {
   display: block;
   content: '';

@@ -1,7 +1,7 @@
 /********** CARDS **********/
 .card {
   position: relative;
-  background-color: rgba(255, 255, 255, 0.04);
+  background-color: var(--color-white-040);
   border-radius: var(--border-radius-lg);
   overflow: hidden;
 }
@@ -10,16 +10,21 @@
   position: absolute;
   top: 2rem;
   left: 2rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .card .label .info {
   display: inline-block;
   font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
   font-weight: var(--font-weight-regular);
   border-radius: var(--border-radius-sm);
-  padding: 0.1rem 1rem;
+  padding: 1px 10px 2px 10px;
   color: var(--color-white);
-  margin-bottom: 0.4rem;
+  margin-bottom: 4px;
 }
 
 .card .label .info-label {
@@ -56,25 +61,13 @@
 .wrapper .icons .wishlist {
   position: absolute;
   top: 2rem;
+  right: 2rem;
   width: 3.2rem;
   height: 3.2rem;
   box-shadow: var(--shadow-default);
   color: var(--color-primary);
   border-radius: 50%;
   cursor: pointer;
-}
-
-.wrapper .icons .wishlist,
-.wrapper .icons .arrow-right {
-  right: -5rem;
-}
-
-.wrapper .icons .arrow-left {
-  left: -5rem;
-}
-
-.wrapper:hover .icons .wishlist {
-  right: 2rem;
 }
 
 .wrapper .icons .arrow-left,
@@ -88,12 +81,27 @@
   cursor: pointer;
 }
 
-.wrapper:hover .icons .arrow-left {
+.wrapper .icons .arrow-left {
   left: 1rem;
 }
-
-.wrapper:hover .icons .arrow-right {
+.wrapper .icons .arrow-right {
   right: 1rem;
+}
+
+.wrapper .icons .wishlist,
+.wrapper .icons .arrow-left,
+.wrapper .icons .arrow-right {
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.wrapper:hover .icons .wishlist,
+.wrapper:hover .icons .arrow-left,
+.wrapper:hover .icons .arrow-right {
+  opacity: 1;
 }
 
 .card .container {
@@ -103,38 +111,51 @@
 .card .container .content {
   display: flex;
   justify-content: space-between;
-  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.15);
+  border-bottom: 0.1rem solid var(--color-white-150);
   margin-bottom: 1.6rem;
 }
 
 .card .container .content .info {
-  flex: 1 1 70%;
+  display: flex;
+  flex-direction: column;
 }
 
 .card .container .content .info span {
   display: block;
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-sm);
   color: var(--color-white);
   margin-bottom: 0.4rem;
 }
 
-.card .container .content .info span:nth-of-type(2) {
+.card .container .content .info div {
   display: flex;
   align-items: center;
-  opacity: 0.7;
   margin-bottom: 1.6rem;
+
+  justify-content: flex-start;
 }
 
-.card .container .content .info span:nth-of-type(2) .pin-market {
-  width: 1.8rem !important;
+.card .container .content .info div .pin-market {
+  width: 1.8rem;
+  height: 1.8rem;
   margin-right: 0.4rem;
+  object-fit: contain;
+  opacity: 0.7;
+}
+
+.card .container .content .info div small {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+  color: var(--color-white-700);
+  font-weight: var(--font-weight-regular);
 }
 
 .card .container .content .info h5 {
   font-size: var(--font-size-lg);
-  color: var(--color-white);
-  opacity: 0.7;
+  line-height: var(--line-height-lg);
+  color: var(--color-white-700);
   font-weight: var(--font-weight-bold);
   margin-bottom: 0.4rem;
 }
@@ -142,6 +163,7 @@
 .card .container .content .info p {
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-base);
   color: var(--color-primary);
   margin-bottom: 0.4rem;
 }
@@ -163,13 +185,15 @@
   width: 2.4rem;
   height: 2.4rem;
   display: inline-block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .card .container .icons .icon span {
   display: block;
-  font-size: 1.2rem;
   color: var(--color-white);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-xs);
 }
 
 /* BULLETS */

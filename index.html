@@ -153,9 +153,10 @@
       <section class="types-section">
         <div class="types-section--header">
           <h3 class="types-section--title">Mais procurados</h3>
-          <a href="#" class="types-section--a"
-            ><small>Ver todos <i class="types-section--icon arrow-right-icon"></i></small
-          ></a>
+          <a href="#" class="types-section--link center-content">
+            <span>Ver todos</span>
+            <i class="types-section--icon arrow-right-icon"></i>
+          </a>
         </div>
 
         <div class="types-section--container">
@@ -228,9 +229,10 @@
         <div class="headline">
           <h3>Ofertas</h3>
 
-          <p>
-            <a title="Ver todas ofertas" href="">Ver todas ofertas<img src="./assets/icons/arrow.svg" /></a>
-          </p>
+          <a href="#" class="ofertas-section--link center-content">
+            <span>Ver todas as ofertas</span>
+            <i class="ofertas-section--icon arrow-right-icon"></i>
+          </a>
         </div>
 
         <div class="card-container">
@@ -250,7 +252,7 @@
             </div>
 
             <div class="label">
-              <div class="info info-label">Usado</div>
+              <span class="info info-label">Usado</span>
             </div>
 
             <div class="container">
@@ -259,14 +261,17 @@
                   <span>2014</span>
                   <h5>Mercedes Benz Convertible Coupe</h5>
                   <p>$25,880</p>
-                  <span><img class="pin-market" src="./assets/icons/pin-market.svg" alt="Estado de venda/locação" />New York</span>
+                  <div>
+                    <img class="pin-market" src="./assets/icons/pin-market.svg" alt="Estado de venda/locação" />
+                    <small>New York</small>
+                  </div>
                 </div>
 
                 <div class="checkbox">
-                  <label title="Compare" class="chk">
-                    Compare
-                    <input type="checkbox" name="compare" />
-                    <span class="check"></span>
+                  <label class="styled-checkbox">
+                    <input class="checkbox" type="checkbox" />
+                    <i class="checkbox-icon"></i>
+                    <span class="checkbox-text">Compare</span>
                   </label>
                 </div>
               </div>
@@ -310,7 +315,7 @@
             </div>
 
             <div class="label">
-              <div class="info info-label">Usado</div>
+              <span class="info info-label">Usado</span>
             </div>
 
             <div class="container">
@@ -319,14 +324,17 @@
                   <span>1995</span>
                   <h5>Ford Truck Lifted</h5>
                   <p>$24,000</p>
-                  <span><img class="pin-market" src="./assets/icons/pin-market.svg" alt="Estado de venda/locação" />Chicago</span>
+                  <div>
+                    <img class="pin-market" src="./assets/icons/pin-market.svg" alt="Estado de venda/locação" />
+                    <small>Chicago</small>
+                  </div>
                 </div>
 
                 <div class="checkbox">
-                  <label title="Compare" class="chk">
-                    Compare
-                    <input type="checkbox" name="compare" />
-                    <span class="check"></span>
+                  <label class="styled-checkbox">
+                    <input class="checkbox" type="checkbox" />
+                    <i class="checkbox-icon"></i>
+                    <span class="checkbox-text">Compare</span>
                   </label>
                 </div>
               </div>
@@ -370,7 +378,7 @@
             </div>
 
             <div class="label">
-              <div class="info warning-label">Novo</div>
+              <span class="info warning-label">Novo</span>
             </div>
 
             <div class="container">
@@ -379,14 +387,17 @@
                   <span>2020</span>
                   <h5>Mercedes Benz C300 Sport</h5>
                   <p>$54,420</p>
-                  <span><img class="pin-market" src="./assets/icons/pin-market.svg" alt="Estado de venda/locação" />San Francisco</span>
+                  <div>
+                    <img class="pin-market" src="./assets/icons/pin-market.svg" alt="Estado de venda/locação" />
+                    <small>San Francisco</small>
+                  </div>
                 </div>
 
                 <div class="checkbox">
-                  <label title="Compare" class="chk">
-                    Compare
-                    <input type="checkbox" name="compare" />
-                    <span class="check"></span>
+                  <label class="styled-checkbox">
+                    <input class="checkbox" type="checkbox" />
+                    <i class="checkbox-icon"></i>
+                    <span class="checkbox-text">Compare</span>
                   </label>
                 </div>
               </div>
@@ -414,8 +425,8 @@
       <!-- / OFERTAS -->
 
       <!-- BRANDS ICONS -->
-      <section class="center-content margin-top-96">
-        <div class="flex-gap">
+      <section class="icon-brand-section center-content">
+        <div>
           <i class="icon-brand icon-opel"></i>
           <i class="icon-brand icon-audi"></i>
           <i class="icon-brand icon-mercedes-benz"></i>
@@ -433,18 +444,23 @@
       <!-- / BRANDS ICONS -->
 
       <!--  DETAILS -->
-      <section class="center-content direction-column margin-top-96">
+      <section class="details-section center-content direction-column">
         <div class="details-header center-content center-page-content space-between">
           <h3>O que temos de diferente</h3>
-          <div class="center-content">
-            <p>Como vender carros no Finder</p>
-            <a href="#">
-              <i class="icon-arrow"></i>
-            </a>
-          </div>
+          <a href="#" class="details-section--link center-content">
+            <span>Como vender carros no Finder</span>
+            <i class="details-section--icon arrow-right-icon"></i>
+          </a>
         </div>
+
         <div class="details-container">
-          <article class="details details-partition">
+          <div class="details--centered-car center-content direction-column">
+            <img src="./assets/images/auto.svg" alt="car illustration" class="auto-car" />
+
+            <img src="./assets/images/road-line.svg" alt="road line illustration" class="road-line" />
+          </div>
+
+          <article class="details details-left">
             <div class="details--card">
               <div class="center-content direction-column title-left">
                 <p class="card--title">Loren ipsun</p>
@@ -471,13 +487,8 @@
               <i class="icon-details icon-left icon-settings"></i>
             </div>
           </article>
-          <div class="center-content direction-column">
-            <img src="./assets/images/auto.svg" alt="car illustration" class="auto-car" />
 
-            <img src="./assets/images/road-line.svg" alt="road line illustration" class="road-line" />
-          </div>
-
-          <article class="details details-partition">
+          <article class="details details-right">
             <div class="details--card">
               <i class="icon-details icon-right icon-info"></i>
               <div class="center-content direction-column title-right">
@@ -513,11 +524,23 @@
         <div class="headline">
           <h3>Últimos publicados</h3>
 
-          <p class="right">
-            <span class="btn btn-gray">Novo</span>
-            <span class="btn btn-white">Usado</span>
-            <a href="">Ver todos<img src="./assets/icons/arrow.svg" /></a>
-          </p>
+          <div class="ultimos-section-actions center-content">
+            <div class="actions-buttons center-content">
+              <span class="new-btn--toggle">
+                <input type="checkbox" name="novo2" id="novo2" />
+                <label for="novo2">Novo</label>
+              </span>
+
+              <span class="used-btn--toggle">
+                <input type="checkbox" name="usado2" id="usado2" checked />
+                <label for="usado2">Usado</label>
+              </span>
+            </div>
+            <a href="#" class="ultimos-section--link center-content">
+              <span>Ver todos</span>
+              <i class="ultimos-section--icon arrow-right-icon"></i>
+            </a>
+          </div>
         </div>
 
         <div class="wrapper-container">
@@ -547,14 +570,17 @@
                     <span>2019</span>
                     <h5>Mazda MX-5 Miata Convertible</h5>
                     <p>$38,500</p>
-                    <span><img class="pin-market" src="./assets/icons/pin-market.svg" alt="Estado de venda/locação" />Los Angeles</span>
+                    <div>
+                      <img class="pin-market" src="./assets/icons/pin-market.svg" alt="Estado de venda/locação" />
+                      <small>Los Angeles</small>
+                    </div>
                   </div>
 
                   <div class="checkbox">
-                    <label title="Compare" class="chk">
-                      Compare
-                      <input type="checkbox" name="compare" />
-                      <span class="check"></span>
+                    <label class="styled-checkbox">
+                      <input class="checkbox" type="checkbox" />
+                      <i class="checkbox-icon"></i>
+                      <span class="checkbox-text">Compare</span>
                     </label>
                   </div>
                 </div>
@@ -602,14 +628,17 @@
                     <span>2019</span>
                     <h5>BMW 640 XI Gran Turismo</h5>
                     <p>$44,920</p>
-                    <span><img class="pin-market" src="./assets/icons/pin-market.svg" alt="Estado de venda/locação" />New Jersey</span>
+                    <div>
+                      <img class="pin-market" src="./assets/icons/pin-market.svg" alt="Estado de venda/locação" />
+                      <small>New Jersey</small>
+                    </div>
                   </div>
 
                   <div class="checkbox">
-                    <label title="Compare" class="chk">
-                      Compare
-                      <input type="checkbox" name="compare" />
-                      <span class="check"></span>
+                    <label class="styled-checkbox">
+                      <input class="checkbox" type="checkbox" />
+                      <i class="checkbox-icon"></i>
+                      <span class="checkbox-text">Compare</span>
                     </label>
                   </div>
                 </div>
@@ -657,14 +686,17 @@
                     <span>2019</span>
                     <h5>Nissan 370Z Nismo</h5>
                     <p>$37,900</p>
-                    <span><img class="pin-market" src="./assets/icons/pin-market.svg" alt="Estado de venda/locação" />New York</span>
+                    <div>
+                      <img class="pin-market" src="./assets/icons/pin-market.svg" alt="Estado de venda/locação" />
+                      <small>New York</small>
+                    </div>
                   </div>
 
                   <div class="checkbox">
-                    <label title="Compare" class="chk">
-                      Compare
-                      <input type="checkbox" name="compare" />
-                      <span class="check"></span>
+                    <label class="styled-checkbox">
+                      <input class="checkbox" type="checkbox" />
+                      <i class="checkbox-icon"></i>
+                      <span class="checkbox-text">Compare</span>
                     </label>
                   </div>
                 </div>
@@ -713,14 +745,17 @@
                     <span>2019</span>
                     <h5>Volkswagen GTI S</h5>
                     <p>$20,000</p>
-                    <span><img class="pin-market" src="./assets/icons/pin-market.svg" alt="Estado de venda/locação" />San Francisco</span>
+                    <div>
+                      <img class="pin-market" src="./assets/icons/pin-market.svg" alt="Estado de venda/locação" />
+                      <small>San Francisco</small>
+                    </div>
                   </div>
 
                   <div class="checkbox">
-                    <label title="Compare" class="chk">
-                      Compare
-                      <input type="checkbox" name="compare" />
-                      <span class="check"></span>
+                    <label class="styled-checkbox">
+                      <input class="checkbox" type="checkbox" />
+                      <i class="checkbox-icon"></i>
+                      <span class="checkbox-text">Compare</span>
                     </label>
                   </div>
                 </div>
@@ -768,14 +803,17 @@
                     <span>2017</span>
                     <h5>Ford Explorer XLT</h5>
                     <p>$24,000</p>
-                    <span><img class="pin-market" src="./assets/icons/pin-market.svg" alt="Estado de venda/locação" />Kansas</span>
+                    <div>
+                      <img class="pin-market" src="./assets/icons/pin-market.svg" alt="Estado de venda/locação" />
+                      <small>Kansas</small>
+                    </div>
                   </div>
 
                   <div class="checkbox">
-                    <label title="Compare" class="chk">
-                      Compare
-                      <input type="checkbox" name="compare" />
-                      <span class="check"></span>
+                    <label class="styled-checkbox">
+                      <input class="checkbox" type="checkbox" />
+                      <i class="checkbox-icon"></i>
+                      <span class="checkbox-text">Compare</span>
                     </label>
                   </div>
                 </div>
@@ -823,14 +861,17 @@
                     <span>2019</span>
                     <h5>Nissan 370Z Nismo</h5>
                     <p>$37,900</p>
-                    <span><img class="pin-market" src="./assets/icons/pin-market.svg" alt="Estado de venda/locação" />New York</span>
+                    <div>
+                      <img class="pin-market" src="./assets/icons/pin-market.svg" alt="Estado de venda/locação" />
+                      <small>New York</small>
+                    </div>
                   </div>
 
                   <div class="checkbox">
-                    <label title="Compare" class="chk">
-                      Compare
-                      <input type="checkbox" name="compare" />
-                      <span class="check"></span>
+                    <label class="styled-checkbox">
+                      <input class="checkbox" type="checkbox" />
+                      <i class="checkbox-icon"></i>
+                      <span class="checkbox-text">Compare</span>
                     </label>
                   </div>
                 </div>
@@ -878,14 +919,17 @@
                     <span>2018</span>
                     <h5>Mazda MX-5 Miata Convertible</h5>
                     <p>$38,500</p>
-                    <span><img class="pin-market" src="./assets/icons/pin-market.svg" alt="Estado de venda/locação" />Los Angeles</span>
+                    <div>
+                      <img class="pin-market" src="./assets/icons/pin-market.svg" alt="Estado de venda/locação" />
+                      <small>Los Angeles</small>
+                    </div>
                   </div>
 
                   <div class="checkbox">
-                    <label title="Compare" class="chk">
-                      Compare
-                      <input type="checkbox" name="compare" />
-                      <span class="check"></span>
+                    <label class="styled-checkbox">
+                      <input class="checkbox" type="checkbox" />
+                      <i class="checkbox-icon"></i>
+                      <span class="checkbox-text">Compare</span>
                     </label>
                   </div>
                 </div>
@@ -933,14 +977,17 @@
                     <span>2018</span>
                     <h5>Mercedes Benz C300 Sport</h5>
                     <p>$54,420</p>
-                    <span><img class="pin-market" src="./assets/icons/pin-market.svg" alt="Estado de venda/locação" />San Francisco</span>
+                    <div>
+                      <img class="pin-market" src="./assets/icons/pin-market.svg" alt="Estado de venda/locação" />
+                      <small>San Francisco</small>
+                    </div>
                   </div>
 
                   <div class="checkbox">
-                    <label title="Compare" class="chk">
-                      Compare
-                      <input type="checkbox" name="compare" />
-                      <span class="check"></span>
+                    <label class="styled-checkbox">
+                      <input class="checkbox" type="checkbox" />
+                      <i class="checkbox-icon"></i>
+                      <span class="checkbox-text">Compare</span>
                     </label>
                   </div>
                 </div>
@@ -987,14 +1034,17 @@
                     <span>1995</span>
                     <h5>Ford Truck Lifted</h5>
                     <p>$24,000</p>
-                    <span><img class="pin-market" src="./assets/icons/pin-market.svg" alt="Estado de venda/locação" />Chicago</span>
+                    <div>
+                      <img class="pin-market" src="./assets/icons/pin-market.svg" alt="Estado de venda/locação" />
+                      <small>Chicago</small>
+                    </div>
                   </div>
 
                   <div class="checkbox">
-                    <label title="Compare" class="chk">
-                      Compare
-                      <input type="checkbox" name="compare" />
-                      <span class="check"></span>
+                    <label class="styled-checkbox">
+                      <input class="checkbox" type="checkbox" />
+                      <i class="checkbox-icon"></i>
+                      <span class="checkbox-text">Compare</span>
                     </label>
                   </div>
                 </div>
@@ -1030,91 +1080,89 @@
       <!-- / ULTIMOS -->
 
       <!-- / ACCESSORIES & APP DOWNLOAD -->
-      <div class="center-content direction-column">
-        <section class="accessories-section center-content">
-          <article class="accessories">
-            <h2 class="article-title">Loren ipsun</h2>
-            <p class="article-content">Loren ipsun amet</p>
-            <div class="button-article center-content">
-              <p>Ir para loja</p>
-              <i class="icon-chevron"></i>
-            </div>
-          </article>
-          <article class="car-parts center-content">
-            <div class="car-parts--itens center-content">
-              <img src="./assets/images/seats.png" alt="bancos de carro" class="item--image" />
-              <p>Bancos</p>
-            </div>
-            <div class="car-parts--itens d-flex">
-              <img src="./assets/images/tires.png" alt="pneus" class="item--image" />
-              <p>Pneus</p>
-            </div>
-            <div class="car-parts--itens d-flex">
-              <img src="./assets/images/wheel.png" alt="rodas de carro" class="item--image" />
-              <p>Rodas</p>
-            </div>
-            <div class="car-parts--itens d-flex">
-              <img src="./assets/images/baby-seat.png" alt="imagem de bebe conforto" class="item--image" />
-              <p>Acessórios</p>
-            </div>
-          </article>
-        </section>
-        <div class="d-flex arrows-accessories">
-          <div class="icon-accessories center-content">
-            <i class="icon-chevron rotate icon-hover"></i>
+      <section class="accessories-section center-content">
+        <article class="accessories">
+          <h2 class="article-title">Loren ipsun</h2>
+          <p class="article-content">Loren ipsun site amet</p>
+          <div class="button-article center-content">
+            <span>Ir para loja</span>
+            <i class="icon-chevron"></i>
           </div>
-          <div class="icon-accessories center-content">
-            <i class="icon-chevron icon-hover"></i>
+        </article>
+        <article class="car-parts center-content">
+          <div class="car-parts--itens center-content">
+            <img src="./assets/images/seats.png" alt="bancos de carro" class="item--image" />
+            <span>Bancos</span>
           </div>
+          <div class="car-parts--itens d-flex">
+            <img src="./assets/images/tires.png" alt="pneus" class="item--image" />
+            <span>Pneus</span>
+          </div>
+          <div class="car-parts--itens d-flex">
+            <img src="./assets/images/wheel.png" alt="rodas de carro" class="item--image" />
+            <span>Rodas</span>
+          </div>
+          <div class="car-parts--itens d-flex">
+            <img src="./assets/images/baby-seat.png" alt="imagem de bebe conforto" class="item--image" />
+            <span>Acessórios</span>
+          </div>
+        </article>
+      </section>
+      <div class="d-flex arrows-accessories">
+        <div class="icon-accessories center-content">
+          <i class="icon-chevron rotate icon-hover"></i>
         </div>
-
-        <section class="app-section d-flex">
-          <article>
-            <h2 class="article-title">Baixe o nosso app</h2>
-            <p class="article-content">
-              Baixe o Finder App e junte-se à comunidade de entusiastas de carros. Não pare sua busca de carro quando sair do computador com nosso aplicativo
-              para Android e iOS!
-            </p>
-
-            <div class="app-stores d-flex">
-              <div class="store-button center-content gap-17">
-                <i class="icon-store icon-apple"></i>
-                <div class="store-button--text">
-                  <p class="button--subtitle">Available on the</p>
-                  <p class="button--title">App Store</p>
-                </div>
-              </div>
-
-              <div class="store-button center-content gap-12">
-                <i class="icon-store icon-google"></i>
-                <div class="store-button--text">
-                  <p class="button--subtitle">GET IT ON</p>
-                  <p class="button--title">Google Play</p>
-                </div>
-              </div>
-            </div>
-          </article>
-          <article class="wrapper-phone center-content">
-            <div class="phone--text">
-              <p>Maneira fácil de comprar e vender veículos</p>
-              <div class="button-article center-content button-phone">
-                <div class="button-container">
-                  <p>Buscar...</p>
-                  <div class="phone-end center-content">
-                    <i class="icon-divider"></i>
-                    <i class="icon-button"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <span class="phone--car"></span>
-            <span class="phone-shape phone-shape--border"></span>
-            <span class="phone-shape phone-shape--background"></span>
-            <span class="circle-bg"></span>
-          </article>
-        </section>
+        <div class="icon-accessories center-content">
+          <i class="icon-chevron icon-hover"></i>
+        </div>
       </div>
+
+      <section class="app-section d-flex">
+        <article class="app-download">
+          <h2 class="article-title">Baixe o nosso app</h2>
+          <p class="article-content">
+            Baixe o Finder App e junte-se à comunidade de entusiastas de carros. Não pare sua busca de carro quando sair do computador com nosso aplicativo para
+            Android e iOS!
+          </p>
+
+          <div class="app-stores d-flex">
+            <div class="store-button center-content gap-17">
+              <i class="icon-store icon-apple"></i>
+              <div class="store-button--text">
+                <p class="button--subtitle">Available on the</p>
+                <p class="button--title">App Store</p>
+              </div>
+            </div>
+
+            <div class="store-button center-content gap-12">
+              <i class="icon-store icon-google"></i>
+              <div class="store-button--text">
+                <p class="button--subtitle">GET IT ON</p>
+                <p class="button--title">Google Play</p>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="wrapper-phone center-content">
+          <div class="phone--text">
+            <p>Maneira fácil de comprar e vender veículos</p>
+            <div class="button-article center-content button-phone">
+              <div class="button-container">
+                <p>Buscar...</p>
+                <div class="phone-end center-content">
+                  <i class="icon-divider"></i>
+                  <i class="icon-button"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <span class="phone--car"></span>
+          <span class="phone-shape phone-shape--border"></span>
+          <span class="phone-shape phone-shape--background"></span>
+          <span class="circle-bg"></span>
+        </article>
+      </section>
       <!-- / ACCESSORIES & APP DOWNLOAD -->
 
       <!-- LATEST NEWS -->
