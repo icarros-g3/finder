@@ -175,6 +175,7 @@ body {
   margin-right: 16px;
   border-radius: 8px;
   opacity: 0.5;
+  max-width: 135px;
 }
 
 .content-wrapper .content .previews .video-preview .play-video--icon {
