@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- OG Tags global início -->
-    <meta property="og:site" content="" />
-    <meta property="og:site_name" content="ICarros Academy" />
-    <meta property="og:image" content="" />
-    <meta property="og:description" content="" />
-    <!-- OG Tags global fim -->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- OG Tags Twitter início -->
-    <meta property="twitter:title" content="ICarros Academy" />
-    <meta property="twitter:description" content="" />
-    <meta property="twitter:image" content="" />
-    <!-- OG Tags Twitter fim -->
+  <!-- OG Tags global início -->
+  <meta property="og:site" content="" />
+  <meta property="og:site_name" content="ICarros Academy" />
+  <meta property="og:image" content="" />
+  <meta property="og:description" content="" />
+  <!-- OG Tags global fim -->
 
-    <!-- Tags Google início -->
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta name="copyright" content="" />
-    <!-- Tags Google fim -->
+  <!-- OG Tags Twitter início -->
+  <meta property="twitter:title" content="ICarros Academy" />
+  <meta property="twitter:description" content="" />
+  <meta property="twitter:image" content="" />
+  <!-- OG Tags Twitter fim -->
 
-    <!-- Verificação do Google search console -->
-    <meta name="google-site-verification" content="" />
+  <!-- Tags Google início -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="copyright" content="" />
+  <!-- Tags Google fim -->
 
-    <!-- Hotjar Tracking Code for  -->
-    <!-- <script>
+  <!-- Verificação do Google search console -->
+  <meta name="google-site-verification" content="" />
+
+  <!-- Hotjar Tracking Code for  -->
+  <!-- <script>
       (function (h, o, t, j, a, r) {
         h.hj =
           h.hj ||
@@ -45,148 +46,172 @@
       })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script> -->
 
-    <!-- Importação de arquivo javascript -->
-    <script defer src="../js/index.js"></script>
+  <!-- Importação de arquivo javascript -->
+  <script defer src="../js/carousel.js"></script>
 
-    <link rel="stylesheet" href="../css/style.css" />
-    <title>Finder</title>
-  </head>
+  <link rel="stylesheet" href="../css/style.css" />
+  <title>Finder</title>
+</head>
 
-  <body>
-    <main>
-      <header class="car-header">
-        <div>
-          <div class="breadcrumb">
-            <p>Nome</p>
+<body>
+  <main>
+    <header class="car-header">
+      <div>
+        <div class="breadcrumb">
+          <p>Nome</p>
 
-            <i class="chevron--icon"></i>
+          <i class="chevron--icon"></i>
 
-            <p>Usados</p>
+          <p>Usados</p>
 
-            <i class="chevron--icon"></i>
+          <i class="chevron--icon"></i>
 
-            <p class="active">Mercedes-Benz E 400 Cabriolet</p>
-          </div>
+          <p class="active">Mercedes-Benz E 400 Cabriolet</p>
+        </div>
 
-          <div class="row space-between">
-            <h3>Mercedes-Benz E 400 Cabriolet</h3>
+        <div class="row space-between">
+          <h3>Mercedes-Benz E 400 Cabriolet</h3>
 
-            <div class="icons">
+          <div class="icons">
+            <div>
               <i class="heart--icon"></i>
+            </div>
+
+            <div>
               <i class="share--icon"></i>
             </div>
           </div>
         </div>
-      </header>
+      </div>
+    </header>
 
-      <div class="content-wrapper">
-        <div class="content">
-          <div class="column">
-            <div class="wrapper">
-              <div class="slider">
-                <img class="show" src="../assets/images/slider-1-ofertas-1.png" alt="Mercedes Benz Convertible Coupe" />
-                <img src="../assets/images/slider-1-ofertas-2.jpg" alt="Mercedes Benz Convertible Coupe" />
-                <img src="../assets/images/slider-1-ofertas-3.jpg" alt="Mercedes Benz Convertible Coupe" />
-              </div>
-
-              <div class="icons">
-                <img class="arrow-left" src="../assets/icons/arrow-left.svg" alt="Imagem anterior" />
-                <img class="arrow-right" src="../assets/icons/arrow-right.svg" alt="Próxima imagem" />
-              </div>
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="column">
+          <div class="wrapper">
+            <div class="slider">
+              <img class="gallery-image show" src="../assets/images/gallery-1.png"
+                alt="Mercedes Benz Convertible Coupe" />
+              <img class="gallery-image" src="../assets/images/gallery-2.jpg" alt="Mercedes Benz Convertible Coupe" />
+              <img class="gallery-image" src="../assets/images/gallery-3.jpg" alt="Mercedes Benz Convertible Coupe" />
+              <img class="gallery-image" src="../assets/images/gallery-4.jpg" alt="Mercedes Benz Convertible Coupe" />
             </div>
 
-            <div class="previews">
-              <img class="active" src="../assets/images/preview-0.png" alt="Image 2" />
-              <img src="../assets/images/preview-1.png" alt="Image 1" />
-              <img src="../assets/images/preview-2.png" alt="Image 2" />
-              <img src="../assets/images/preview-3.png" alt="Image 4" />
-
-              <div class="video-preview">
-                <i class="play-video--icon"></i>
-                <p>Play video</p>
+            <div class="icons">
+              <div id="previous-button" class="arrow-left-container">
+                <i class="chevron--icon rotate"></i>
               </div>
-            </div>
 
-            <div class="specifications">
-              <h4>Especificações</h4>
-              <ul>
-                <li><strong>Ano:</strong> 2018</li>
-                <li><strong>Kilome:</strong> 25K miles</li>
-                <li><strong>Tipo:</strong> Convertible</li>
-                <li><strong>Transmisão:</strong> Automático</li>
-              </ul>
+              <div id="next-button" class="arrow-right-container">
+                <i class="chevron--icon"></i>
+              </div>
+
+              <div class="pagination">
+                <i class="image--icon"></i>
+                <p id="pagination-content">1/4</p>
+              </div>
             </div>
           </div>
 
-          <div class="sidebar">
-            <h3>R$ 60.990</h3>
+          <div class="previews">
+            <img class="preview-image active-preview" src="../assets/images/gallery-1.png" alt="Image 2" />
+            <img class="preview-image" src="../assets/images/gallery-2.jpg" alt="Image 1" />
+            <img class="preview-image" src="../assets/images/gallery-3.jpg" alt="Image 2" />
+            <img class="preview-image" src="../assets/images/gallery-4.jpg" alt="Image 4" />
 
-            <div class="meta">
-              <div class="mileage">
-                <div class="distance">
-                  <p>25.000 Km</p>
-                </div>
+            <div class="video-preview">
+              <i class="play-video--icon"></i>
+              <p>Play video</p>
+            </div>
+          </div>
 
-                <span class="divider">|</span>
+          <div class="specifications">
+            <h4>Especificações</h4>
+            <ul>
+              <li><strong>Ano:</strong> 2018</li>
+              <li><strong>Kilome:</strong> 25K miles</li>
+              <li><strong>Tipo:</strong> Convertible</li>
+              <li><strong>Transmisão:</strong> Automático</li>
+            </ul>
+          </div>
+        </div>
 
-                <div class="location">
-                  <p>São Paulo</p>
-                </div>
+        <div class="sidebar">
+          <h3>R$ 60.990</h3>
+
+          <div class="meta">
+            <div class="mileage">
+              <div class="distance">
+                <i class="dashboard--icon"></i>
+                <p>25.000 Km</p>
+              </div>
+
+              <div class="divider"></div>
+
+              <div class="location">
+                <i class="pin--icon"></i>
+                <p>São Paulo</p>
               </div>
             </div>
+          </div>
 
-            <div class="author">
-              <p>Vendedor particular</p>
+          <div class="author">
+            <p>Vendedor particular</p>
 
-              <div class="info">
-                <div class="basic">
-                  <img src="../assets/images/avatar.png" alt="Avatar" />
+            <div class="info">
+              <div class="basic">
+                <img src="../assets/images/avatar.png" alt="Avatar" />
 
-                  <div>
-                    <p>Usuário</p>
+                <div>
+                  <p>Usuário</p>
 
-                    <div class="reviews">
-                      <i class="filled-star--icon"></i>
-                      <i class="filled-star--icon"></i>
-                      <i class="filled-star--icon"></i>
-                      <i class="filled-star--icon"></i>
-                      <i class="filled-star--icon"></i>
+                  <div class="reviews">
+                    <i class="filled-star--icon"></i>
+                    <i class="filled-star--icon"></i>
+                    <i class="filled-star--icon"></i>
+                    <i class="filled-star--icon"></i>
+                    <i class="filled-star--icon"></i>
 
-                      <p>(5 reviews)</p>
-                    </div>
+                    <p>(5 reviews)</p>
                   </div>
                 </div>
-
-                <div class="others">
-                  <p>Other ads by this seller</p>
-                </div>
-
-                <button class="outlined"><i class="phone2--icon"></i> (11) *** ****</button>
-
-                <br />
-
-                <button class="primary">
-                  <i class="mail--icon"></i>
-                  Enviar email
-                </button>
               </div>
-            </div>
 
-            <div class="subscribe">
-              <p>Envie-me por e-mail quedas de preços e novas listagens para estes resultados de pesquisa:</p>
+              <div class="others">
+                <p>Other ads by this seller</p>
+              </div>
 
-              <div class="input-group">
+              <button class="outlined"><i class="phone2--icon"></i> (11) *** ****</button>
+
+              <br />
+
+              <button class="primary">
                 <i class="mail--icon"></i>
-                <input type="text" placeholder="Email" />
-                <button>Subscribe</button>
-              </div>
-
-              <i class="checkbox-filled--icon"></i>
-              <label for="email">Concordo em receber alertas de queda de preço neste veículo e informações úteis sobre compras.</label>
+                Enviar email
+              </button>
             </div>
+          </div>
+
+          <div class="subscribe">
+            <p>Envie-me por e-mail quedas de preços e novas listagens para estes resultados de pesquisa:</p>
+
+            <div class="input-group">
+              <i class="mail--icon"></i>
+              <input type="text" placeholder="Email" />
+              <button>Subscribe</button>
+            </div>
+
+            <label class="styled-checkbox">
+              <input class="checkbox" type="checkbox">
+              <i class="checkbox-icon"></i>
+              <span class="checkbox-text">Concordo em receber alertas de queda de preço neste veículo e informações
+                úteis sobre compras.</span>
+            </label>
           </div>
         </div>
       </div>
-    </main>
-  </body>
+    </div>
+  </main>
+</body>
+
 </html>
