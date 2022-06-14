@@ -46,3 +46,6 @@
 /* Catalogo */
 @import url(./components/catalog.css);
 
+/* Mini Header Catalogo*/
+@import url(./components/mini-header.css);
+
