@@ -111,8 +111,15 @@
 .card .container .content {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   border-bottom: 0.1rem solid var(--color-white-150);
   margin-bottom: 1.6rem;
+}
+
+.card .container .content .info-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .card .container .content .info {

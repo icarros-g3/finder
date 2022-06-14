@@ -1,13 +1,14 @@
 section.catalogo {
   display: flex;
   justify-content: center;
+  max-width: 966px;
+  width: 100%;
 }
 
 section.catalogo .wrapper-container {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-  max-width: 966px;
   justify-content: space-between;
 }
 
@@ -24,7 +25,10 @@ section.catalogo .wrapper-container .card .wrapper .slider {
 section.catalogo .wrapper-container .card .container .icons .icon {
   height: 62px;
   width: 136px;
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 section.catalogo section.footer-catalogo {
@@ -113,6 +117,7 @@ section.catalogo section.footer-catalogo .sorting-compare .sorting .select::afte
   max-width: 14px;
   background-color: var(--color-white);
   mask-image: url(../../assets/icons/chevron.svg);
+  -webkit-mask-image: url(../../assets/icons/chevron.svg);
   justify-self: end;
   transform: rotate(90deg);
 }
@@ -156,7 +161,7 @@ section.catalogo section.footer-catalogo .sorting-compare .compare p {
 section.catalogo section.footer-catalogo .sorting-compare .compare .switch-horizontal--icon {
   display: inline-block;
   width: 100%;
-  height: 14px;
+  height: 16px;
   max-width: 14px;
   mask-image: url(../../assets/icons/switch-horizontal.svg);
   -webkit-mask-image: url(../../assets/icons/switch-horizontal.svg);
