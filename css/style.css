@@ -43,3 +43,6 @@
 /* Interna carro */
 @import url(./components/car.css);
 
+/* Catalogo */
+@import url(./components/catalog.css);
+

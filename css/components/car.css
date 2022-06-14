@@ -112,8 +112,7 @@ body {
   mask-size: cover;
 }
 
-.car-header .breadcrumb p,
-.breadcrumb span {
+.car-header .breadcrumb p {
   color: var(--color-white);
   opacity: 0.5;
 }
