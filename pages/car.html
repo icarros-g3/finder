@@ -1,36 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- OG Tags global início -->
+    <meta property="og:site" content="" />
+    <meta property="og:site_name" content="ICarros Academy" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="" />
+    <!-- OG Tags global fim -->
 
-  <!-- OG Tags global início -->
-  <meta property="og:site" content="" />
-  <meta property="og:site_name" content="ICarros Academy" />
-  <meta property="og:image" content="" />
-  <meta property="og:description" content="" />
-  <!-- OG Tags global fim -->
+    <!-- OG Tags Twitter início -->
+    <meta property="twitter:title" content="ICarros Academy" />
+    <meta property="twitter:description" content="" />
+    <meta property="twitter:image" content="" />
+    <!-- OG Tags Twitter fim -->
 
-  <!-- OG Tags Twitter início -->
-  <meta property="twitter:title" content="ICarros Academy" />
-  <meta property="twitter:description" content="" />
-  <meta property="twitter:image" content="" />
-  <!-- OG Tags Twitter fim -->
+    <!-- Tags Google início -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="copyright" content="" />
+    <!-- Tags Google fim -->
 
-  <!-- Tags Google início -->
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
-  <meta name="copyright" content="" />
-  <!-- Tags Google fim -->
+    <!-- Verificação do Google search console -->
+    <meta name="google-site-verification" content="" />
 
-  <!-- Verificação do Google search console -->
-  <meta name="google-site-verification" content="" />
-
-  <!-- Hotjar Tracking Code for  -->
-  <!-- <script>
+    <!-- Hotjar Tracking Code for  -->
+    <!-- <script>
       (function (h, o, t, j, a, r) {
         h.hj =
           h.hj ||
@@ -46,172 +45,803 @@
       })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script> -->
 
-  <!-- Importação de arquivo javascript -->
-  <script defer src="../js/carousel.js"></script>
+    <!-- Importação de arquivo javascript -->
+    <script defer src="../js/carousel.js"></script>
+    <script defer src="../js/index.js"></script>
 
-  <link rel="stylesheet" href="../css/style.css" />
-  <title>Finder</title>
-</head>
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Finder</title>
+  </head>
 
-<body>
-  <main>
-    <header class="car-header">
-      <div>
-        <div class="breadcrumb">
-          <p>Nome</p>
+  <body>
+    <main>
+      <!-- CAR AD -->
+      <header class="car-header">
+        <div>
+          <div class="breadcrumb">
+            <p>Nome</p>
 
-          <i class="chevron--icon"></i>
+            <i class="chevron--icon"></i>
 
-          <p>Usados</p>
+            <p>Usados</p>
 
-          <i class="chevron--icon"></i>
+            <i class="chevron--icon"></i>
 
-          <p class="active">Mercedes-Benz E 400 Cabriolet</p>
+            <p class="active">Mercedes-Benz E 400 Cabriolet</p>
+          </div>
+
+          <div class="row space-between">
+            <h3>Mercedes-Benz E 400 Cabriolet</h3>
+
+            <div class="icons">
+              <div>
+                <i class="heart--icon"></i>
+              </div>
+
+              <div>
+                <i class="share--icon"></i>
+              </div>
+            </div>
+          </div>
         </div>
+      </header>
 
-        <div class="row space-between">
-          <h3>Mercedes-Benz E 400 Cabriolet</h3>
+      <div class="content-wrapper">
+        <div class="content">
+          <div class="column">
+            <div class="wrapper">
+              <div class="slider-gallery">
+                <img class="gallery-image show" src="../assets/images/gallery-1.png" alt="Mercedes Benz Convertible Coupe" />
+                <img class="gallery-image" src="../assets/images/gallery-2.jpg" alt="Mercedes Benz Convertible Coupe" />
+                <img class="gallery-image" src="../assets/images/gallery-3.jpg" alt="Mercedes Benz Convertible Coupe" />
+                <img class="gallery-image" src="../assets/images/gallery-4.jpg" alt="Mercedes Benz Convertible Coupe" />
+              </div>
 
-          <div class="icons">
-            <div>
-              <i class="heart--icon"></i>
+              <div class="icons">
+                <div id="previous-button" class="arrow-left-container">
+                  <i class="chevron--icon rotate"></i>
+                </div>
+
+                <div id="next-button" class="arrow-right-container">
+                  <i class="chevron--icon"></i>
+                </div>
+
+                <div class="pagination">
+                  <i class="image--icon"></i>
+                  <p id="pagination-content">1/4</p>
+                </div>
+              </div>
             </div>
 
-            <div>
-              <i class="share--icon"></i>
+            <div class="previews">
+              <img class="preview-image active-preview" src="../assets/images/gallery-1.png" alt="Image 2" />
+              <img class="preview-image" src="../assets/images/gallery-2.jpg" alt="Image 1" />
+              <img class="preview-image" src="../assets/images/gallery-3.jpg" alt="Image 2" />
+              <img class="preview-image" src="../assets/images/gallery-4.jpg" alt="Image 4" />
+
+              <div class="video-preview">
+                <i class="play-video--icon"></i>
+                <p>Play video</p>
+              </div>
+            </div>
+
+            <div class="specifications">
+              <h4>Especificações</h4>
+              <ul>
+                <li><strong>Ano:</strong> 2018</li>
+                <li><strong>Kilome:</strong> 25K miles</li>
+                <li><strong>Tipo:</strong> Convertible</li>
+                <li><strong>Transmisão:</strong> Automático</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="sidebar">
+            <h3>R$ 60.990</h3>
+
+            <div class="meta">
+              <div class="mileage">
+                <div class="distance">
+                  <i class="dashboard--icon"></i>
+                  <p>25.000 Km</p>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="location">
+                  <i class="pin--icon"></i>
+                  <p>São Paulo</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="author">
+              <p>Vendedor particular</p>
+
+              <div class="info">
+                <div class="basic">
+                  <img src="../assets/images/avatar.png" alt="Avatar" />
+
+                  <div>
+                    <p>Usuário</p>
+
+                    <div class="reviews">
+                      <i class="filled-star--icon"></i>
+                      <i class="filled-star--icon"></i>
+                      <i class="filled-star--icon"></i>
+                      <i class="filled-star--icon"></i>
+                      <i class="filled-star--icon"></i>
+
+                      <p>(5 reviews)</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="others">
+                  <p>Other ads by this seller</p>
+                </div>
+
+                <button class="outlined"><i class="phone2--icon"></i> (11) *** ****</button>
+
+                <br />
+
+                <button class="primary">
+                  <i class="mail--icon"></i>
+                  Enviar email
+                </button>
+              </div>
+            </div>
+
+            <div class="subscribe">
+              <p>Envie-me por e-mail quedas de preços e novas listagens para estes resultados de pesquisa:</p>
+
+              <div class="input-group">
+                <i class="mail--icon"></i>
+                <input type="text" placeholder="Email" />
+                <button>Subscribe</button>
+              </div>
+
+              <label class="styled-checkbox">
+                <input class="checkbox" type="checkbox" />
+                <i class="checkbox-icon"></i>
+                <span class="checkbox-text">Concordo em receber alertas de queda de preço neste veículo e informações úteis sobre compras.</span>
+              </label>
             </div>
           </div>
         </div>
       </div>
-    </header>
+      <!-- / CAR AD -->
 
-    <div class="content-wrapper">
-      <div class="content">
-        <div class="column">
-          <div class="wrapper">
-            <div class="slider">
-              <img class="gallery-image show" src="../assets/images/gallery-1.png"
-                alt="Mercedes Benz Convertible Coupe" />
-              <img class="gallery-image" src="../assets/images/gallery-2.jpg" alt="Mercedes Benz Convertible Coupe" />
-              <img class="gallery-image" src="../assets/images/gallery-3.jpg" alt="Mercedes Benz Convertible Coupe" />
-              <img class="gallery-image" src="../assets/images/gallery-4.jpg" alt="Mercedes Benz Convertible Coupe" />
+      <!-- SELLER DESCRIPTION -->
+      <section class="center-page-content car-ad-description">
+        <section class="car-ad-icons center-content">
+          <div class="car-ad-description--icon center-content">
+            <div class="icon-background center-content">
+              <i class="icon-adv icon-ad-check"></i>
             </div>
-
-            <div class="icons">
-              <div id="previous-button" class="arrow-left-container">
-                <i class="chevron--icon rotate"></i>
-              </div>
-
-              <div id="next-button" class="arrow-right-container">
-                <i class="chevron--icon"></i>
-              </div>
-
-              <div class="pagination">
-                <i class="image--icon"></i>
-                <p id="pagination-content">1/4</p>
-              </div>
+            <p>Verificado e certificado pelo finder</p>
+          </div>
+          <div class="car-ad-description--icon center-content">
+            <div class="icon-background center-content">
+              <i class="icon-adv icon-ad-wheel"></i>
             </div>
+            <p>Único dono</p>
           </div>
-
-          <div class="previews">
-            <img class="preview-image active-preview" src="../assets/images/gallery-1.png" alt="Image 2" />
-            <img class="preview-image" src="../assets/images/gallery-2.jpg" alt="Image 1" />
-            <img class="preview-image" src="../assets/images/gallery-3.jpg" alt="Image 2" />
-            <img class="preview-image" src="../assets/images/gallery-4.jpg" alt="Image 4" />
-
-            <div class="video-preview">
-              <i class="play-video--icon"></i>
-              <p>Play video</p>
+          <div class="car-ad-description--icon center-content">
+            <div class="icon-background center-content">
+              <i class="icon-adv icon-ad-driving"></i>
             </div>
+            <p>Bem equipado</p>
           </div>
+          <div class="car-ad-description--icon center-content">
+            <div class="icon-background center-content">
+              <i class="icon-adv icon-ad-accident"></i>
+            </div>
+            <p>Nenhum acidente/ dano relatado</p>
+          </div>
+        </section>
+      
+        <section class="seller-description">
+          <h2>Descrição do vendedor</h2>
+          <p>
+            Lorem tincidunt lectus vitae id vulputate diam quam. Imperdiet non scelerisque turpis sed etiam ultrices. Blandit mollis dignissim egestas
+            consectetur porttitor. Vulputate dolor pretium, dignissim eu augue sit ut convallis. Lectus est, magna urna feugiat sed ultricies sed in lacinia.
+            Fusce potenti sit id pharetra vel ornare. Vestibulum sed tellus ullamcorper arcu.
+          </p>
+          <a href="#" class="details-section--link">Veja mais</a>
+        </section>
 
-          <div class="specifications">
-            <h4>Especificações</h4>
-            <ul>
-              <li><strong>Ano:</strong> 2018</li>
-              <li><strong>Kilome:</strong> 25K miles</li>
-              <li><strong>Tipo:</strong> Convertible</li>
-              <li><strong>Transmisão:</strong> Automático</li>
-            </ul>
+        <i class="icon-divider-horizontal"></i>
+
+
+        <section class="car-ad-footer">
+          <div class="car-ad-footer--item">
+            <p>Publicado: <span>Abril, 2020</span></p>
+            
           </div>
+          <i class="icon-divider"></i>
+          <div class="car-ad-footer--item">
+            <p>Numero do anuncio: <span>681013232</span></p>
+          </div>
+          <i class="icon-divider"></i>
+          <div class="car-ad-footer--item">
+            <p>Visualizações: <span>48</span></p>
+          </div>
+        </section>
+      </section>
+      <!-- / SELLER DESCRIPTION -->
+
+      <!-- ULTIMOS -->
+      <section class="ultimos center-page-content">
+        <div class="headline">
+          <h3>Últimos publicados</h3>
         </div>
 
-        <div class="sidebar">
-          <h3>R$ 60.990</h3>
+        <div class="wrapper-container">
+          <div class="wrapper-slider">
+            <article class="card">
+              <div class="wrapper">
+                <div class="slider">
+                  <img class="show" src="../assets/images/slider-1-ultimos-1.png" alt="Mazda MX-5 Miata Convertible" />
+                  <img src="../assets/images/slider-1-ultimos-2.jpg" alt="Mazda MX-5 Miata Convertible" />
+                  <img src="../assets/images/slider-1-ultimos-3.jpg" alt="Mazda MX-5 Miata Convertible" />
+                </div>
 
-          <div class="meta">
-            <div class="mileage">
-              <div class="distance">
-                <i class="dashboard--icon"></i>
-                <p>25.000 Km</p>
-              </div>
-
-              <div class="divider"></div>
-
-              <div class="location">
-                <i class="pin--icon"></i>
-                <p>São Paulo</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="author">
-            <p>Vendedor particular</p>
-
-            <div class="info">
-              <div class="basic">
-                <img src="../assets/images/avatar.png" alt="Avatar" />
-
-                <div>
-                  <p>Usuário</p>
-
-                  <div class="reviews">
-                    <i class="filled-star--icon"></i>
-                    <i class="filled-star--icon"></i>
-                    <i class="filled-star--icon"></i>
-                    <i class="filled-star--icon"></i>
-                    <i class="filled-star--icon"></i>
-
-                    <p>(5 reviews)</p>
-                  </div>
+                <div class="icons">
+                  <img class="wishlist" src="../assets/icons/wishlist.svg" alt="Adicionar aos favoritos" />
+                  <img class="arrow-left" src="../assets/icons/arrow-left.svg" alt="Imagem anterior" />
+                  <img class="arrow-right" src="../assets/icons/arrow-right.svg" alt="Próxima imagem" />
                 </div>
               </div>
 
-              <div class="others">
-                <p>Other ads by this seller</p>
+              <div class="label">
+                <div class="info warning-label">Novo</div>
               </div>
 
-              <button class="outlined"><i class="phone2--icon"></i> (11) *** ****</button>
+              <div class="container">
+                <div class="content">
+                  <div class="info-header">
+                    <span>2019</span>
 
-              <br />
+                    <div class="checkbox">
+                      <label class="styled-checkbox">
+                        <input class="checkbox" type="checkbox" />
+                        <i class="checkbox-icon"></i>
+                        <span class="checkbox-text">Compare</span>
+                      </label>
+                    </div>
+                  </div>
 
-              <button class="primary">
-                <i class="mail--icon"></i>
-                Enviar email
-              </button>
-            </div>
+                  <div class="info">
+                    <h5>Mazda MX-5 Miata Convertible</h5>
+                    <p>$38,500</p>
+                    <div>
+                      <img class="pin-market" src="../assets/icons/pin-market.svg" alt="Estado de venda/locação" />
+                      <small>Los Angeles</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="icons">
+                  <div class="icon">
+                    <img src="../assets/icons/dashboard.svg" alt="Quilometragem do veículo" />
+                    <span>18K mi</span>
+                  </div>
+
+                  <div class="icon">
+                    <img src="../assets/icons/gearbox.svg" alt="Transmissão do veículo" />
+                    <span>Manual</span>
+                  </div>
+
+                  <div class="icon">
+                    <img src="../assets/icons/petrol.svg" alt="Combustível de alimentação" />
+                    <span>Petrol</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="wrapper">
+                <div class="slider">
+                  <img class="show" src="../assets/images/slider-2-ultimos-1.png" alt="BMW 640 XI Gran Turismo" />
+                  <img src="../assets/images/slider-2-ultimos-2.jpg" alt="BMW 640 XI Gran Turismo" />
+                </div>
+
+                <div class="icons">
+                  <img class="wishlist" src="../assets/icons/wishlist.svg" alt="Adicionar aos favoritos" />
+                  <img class="arrow-left" src="../assets/icons/arrow-left.svg" alt="Imagem anterior" />
+                  <img class="arrow-right" src="../assets/icons/arrow-right.svg" alt="Próxima imagem" />
+                </div>
+              </div>
+
+              <div class="label">
+                <div class="info info-label">Usado</div>
+              </div>
+
+              <div class="container">
+                <div class="content">
+                  <div class="info-header">
+                    <span>2019</span>
+                    
+                    <div class="checkbox">
+                      <label class="styled-checkbox">
+                        <input class="checkbox" type="checkbox" />
+                        <i class="checkbox-icon"></i>
+                        <span class="checkbox-text">Compare</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="info">
+                    <h5>BMW 640 XI Gran Turismo</h5>
+                    <p>$44,920</p>
+                    <div>
+                      <img class="pin-market" src="../assets/icons/pin-market.svg" alt="Estado de venda/locação" />
+                      <small>New Jersey</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="icons">
+                  <div class="icon">
+                    <img src="../assets/icons/dashboard.svg" alt="Quilometragem do veículo" />
+                    <span>10K mi</span>
+                  </div>
+
+                  <div class="icon">
+                    <img src="../assets/icons/gearbox.svg" alt="Transmissão do veículo" />
+                    <span>Automatic</span>
+                  </div>
+
+                  <div class="icon">
+                    <img src="../assets/icons/petrol.svg" alt="Combustível de alimentação" />
+                    <span>Gasoline</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="wrapper">
+                <div class="slider">
+                  <img class="show" src="../assets/images/slider-3-ultimos-1.png" alt="Nissan 370Z Nismo" />
+                  <img src="../assets/images/slider-3-ultimos-2.jpg" alt="Nissan 370Z Nismo" />
+                </div>
+
+                <div class="icons">
+                  <img class="wishlist" src="../assets/icons/wishlist.svg" alt="Adicionar aos favoritos" />
+                  <img class="arrow-left" src="../assets/icons/arrow-left.svg" alt="Imagem anterior" />
+                  <img class="arrow-right" src="../assets/icons/arrow-right.svg" alt="Próxima imagem" />
+                </div>
+              </div>
+
+              <div class="label">
+                <div class="info info-label">Usado</div>
+              </div>
+
+              <div class="container">
+                <div class="content">
+                  <div class="info-header">
+                    <span>2019</span>
+
+                  <div class="checkbox">
+                    <label class="styled-checkbox">
+                      <input class="checkbox" type="checkbox" />
+                      <i class="checkbox-icon"></i>
+                      <span class="checkbox-text">Compare</span>
+                    </label>
+                  </div>
+                  </div>
+
+                  <div class="info">
+                    <h5>Nissan 370Z Nismo</h5>
+                    <p>$37,900</p>
+                    <div>
+                      <img class="pin-market" src="../assets/icons/pin-market.svg" alt="Estado de venda/locação" />
+                      <small>New York</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="icons">
+                  <div class="icon">
+                    <img src="../assets/icons/dashboard.svg" alt="Quilometragem do veículo" />
+                    <span>16K mi</span>
+                  </div>
+
+                  <div class="icon">
+                    <img src="../assets/icons/gearbox.svg" alt="Transmissão do veículo" />
+                    <span>Automatic</span>
+                  </div>
+
+                  <div class="icon">
+                    <img src="../assets/icons/petrol.svg" alt="Combustível de alimentação" />
+                    <span>Diesel</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="wrapper">
+                <div class="slider">
+                  <img class="show" src="../assets/images/slider-4-ultimos-1.png" alt="Volkswagen GTI S" />
+                  <img src="../assets/images/slider-4-ultimos-2.png" alt="Volkswagen GTI S" />
+                </div>
+
+                <div class="icons">
+                  <img class="wishlist" src="../assets/icons/wishlist.svg" alt="Adicionar aos favoritos" />
+                  <img class="arrow-left" src="../assets/icons/arrow-left.svg" alt="Imagem anterior" />
+                  <img class="arrow-right" src="../assets/icons/arrow-right.svg" alt="Próxima imagem" />
+                </div>
+              </div>
+
+              <div class="label">
+                <div class="info warning-label">Novo</div>
+                <div class="info success-label">Certificado</div>
+              </div>
+
+              <div class="container">
+                <div class="content">
+                  <div class="info-header">
+                    <span>2019</span>
+
+                    <div class="checkbox">
+                      <label class="styled-checkbox">
+                        <input class="checkbox" type="checkbox" />
+                        <i class="checkbox-icon"></i>
+                        <span class="checkbox-text">Compare</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="info">
+                    <h5>Volkswagen GTI S</h5>
+                    <p>$20,000</p>
+                    <div>
+                      <img class="pin-market" src="../assets/icons/pin-market.svg" alt="Estado de venda/locação" />
+                      <small>San Francisco</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="icons">
+                  <div class="icon">
+                    <img src="../assets/icons/dashboard.svg" alt="Quilometragem do veículo" />
+                    <span>25K mi</span>
+                  </div>
+
+                  <div class="icon">
+                    <img src="../assets/icons/gearbox.svg" alt="Transmissão do veículo" />
+                    <span>Automatic</span>
+                  </div>
+
+                  <div class="icon">
+                    <img src="../assets/icons/petrol.svg" alt="Combustível de alimentação" />
+                    <span>Hybrid</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="wrapper">
+                <div class="slider">
+                  <img class="show" src="../assets/images/slider-5-ultimos-1.png" alt="Ford Explorer XLT" />
+                  <img src="../assets/images/slider-5-ultimos-2.png" alt="Ford Explorer XLT" />
+                </div>
+
+                <div class="icons">
+                  <img class="wishlist" src="../assets/icons/wishlist.svg" alt="Adicionar aos favoritos" />
+                  <img class="arrow-left" src="../assets/icons/arrow-left.svg" alt="Imagem anterior" />
+                  <img class="arrow-right" src="../assets/icons/arrow-right.svg" alt="Próxima imagem" />
+                </div>
+              </div>
+
+              <div class="label">
+                <div class="info info-label">Usado</div>
+              </div>
+
+              <div class="container">
+                <div class="content">
+                  <div class="info-header">
+                    <span>2017</span>
+
+                    <div class="checkbox">
+                      <label class="styled-checkbox">
+                        <input class="checkbox" type="checkbox" />
+                        <i class="checkbox-icon"></i>
+                        <span class="checkbox-text">Compare</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="info">
+                    <h5>Ford Explorer XLT</h5>
+                    <p>$24,000</p>
+                    <div>
+                      <img class="pin-market" src="../assets/icons/pin-market.svg" alt="Estado de venda/locação" />
+                      <small>Kansas</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="icons">
+                  <div class="icon">
+                    <img src="../assets/icons/dashboard.svg" alt="Quilometragem do veículo" />
+                    <span>34K mi</span>
+                  </div>
+
+                  <div class="icon">
+                    <img src="../assets/icons/gearbox.svg" alt="Transmissão do veículo" />
+                    <span>Manual</span>
+                  </div>
+
+                  <div class="icon">
+                    <img src="../assets/icons/petrol.svg" alt="Combustível de alimentação" />
+                    <span>Diesel</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="wrapper">
+                <div class="slider">
+                  <img class="show" src="../assets/images/slider-6-ultimos-1.png" alt="Nissan 370Z Nismo" />
+                  <img src="../assets/images/slider-3-ultimos-2.jpg" alt="Nissan 370Z Nismo" />
+                </div>
+
+                <div class="icons">
+                  <img class="wishlist" src="../assets/icons/wishlist.svg" alt="Adicionar aos favoritos" />
+                  <img class="arrow-left" src="../assets/icons/arrow-left.svg" alt="Imagem anterior" />
+                  <img class="arrow-right" src="../assets/icons/arrow-right.svg" alt="Próxima imagem" />
+                </div>
+              </div>
+
+              <div class="label">
+                <div class="info info-label">Usado</div>
+              </div>
+
+              <div class="container">
+                <div class="content">
+                  <div class="info-header">
+                    <span>2019</span>
+
+                    <div class="checkbox">
+                      <label class="styled-checkbox">
+                        <input class="checkbox" type="checkbox" />
+                        <i class="checkbox-icon"></i>
+                        <span class="checkbox-text">Compare</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="info">
+                    <h5>Nissan 370Z Nismo</h5>
+                    <p>$37,900</p>
+                    <div>
+                      <img class="pin-market" src="../assets/icons/pin-market.svg" alt="Estado de venda/locação" />
+                      <small>New York</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="icons">
+                  <div class="icon">
+                    <img src="../assets/icons/dashboard.svg" alt="Quilometragem do veículo" />
+                    <span>16K mi</span>
+                  </div>
+
+                  <div class="icon">
+                    <img src="../assets/icons/gearbox.svg" alt="Transmissão do veículo" />
+                    <span>Automatic</span>
+                  </div>
+
+                  <div class="icon">
+                    <img src="../assets/icons/petrol.svg" alt="Combustível de alimentação" />
+                    <span>Diesel</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="wrapper">
+                <div class="slider">
+                  <img class="show" src="../assets/images/slider-7-ultimos-1.png" alt="Mazda MX-5 Miata Convertible" />
+                </div>
+
+                <div class="icons">
+                  <img class="wishlist" src="../assets/icons/wishlist.svg" alt="Adicionar aos favoritos" />
+                  <img class="arrow-left" src="../assets/icons/arrow-left.svg" alt="Imagem anterior" />
+                  <img class="arrow-right" src="../assets/icons/arrow-right.svg" alt="Próxima imagem" />
+                </div>
+              </div>
+
+              <div class="label">
+                <div class="info info-label">Usado</div>
+                <div class="info success-label">Certificado</div>
+              </div>
+
+              <div class="container">
+                <div class="content">
+                  <div class="info-header">
+                    <span>2018</span>
+
+                    <div class="checkbox">
+                      <label class="styled-checkbox">
+                        <input class="checkbox" type="checkbox" />
+                        <i class="checkbox-icon"></i>
+                        <span class="checkbox-text">Compare</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="info">
+                    <h5>Mazda MX-5 Miata Convertible</h5>
+                    <p>$38,500</p>
+                    <div>
+                      <img class="pin-market" src="../assets/icons/pin-market.svg" alt="Estado de venda/locação" />
+                      <small>Los Angeles</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="icons">
+                  <div class="icon">
+                    <img src="../assets/icons/dashboard.svg" alt="Quilometragem do veículo" />
+                    <span>18K mi</span>
+                  </div>
+
+                  <div class="icon">
+                    <img src="../assets/icons/gearbox.svg" alt="Transmissão do veículo" />
+                    <span>Manual</span>
+                  </div>
+
+                  <div class="icon">
+                    <img src="../assets/icons/petrol.svg" alt="Combustível de alimentação" />
+                    <span>Gasoline</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="wrapper">
+                <div class="slider">
+                  <img class="show" src="../assets/images/slider-8-ultimos-1.png" alt="Mercedes Benz C300 Sport" />
+                </div>
+
+                <div class="icons">
+                  <img class="wishlist" src="../assets/icons/wishlist.svg" alt="Adicionar aos favoritos" />
+                  <img class="arrow-left" src="../assets/icons/arrow-left.svg" alt="Imagem anterior" />
+                  <img class="arrow-right" src="../assets/icons/arrow-right.svg" alt="Próxima imagem" />
+                </div>
+              </div>
+
+              <div class="label">
+                <div class="info info-label">Usado</div>
+                <div class="info success-label">Certificado</div>
+              </div>
+
+              <div class="container">
+                <div class="content">
+                  <div class="info-header">
+                    <span>2018</span>
+
+                    <div class="checkbox">
+                      <label class="styled-checkbox">
+                        <input class="checkbox" type="checkbox" />
+                        <i class="checkbox-icon"></i>
+                        <span class="checkbox-text">Compare</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="info">
+                    <h5>Mercedes Benz C300 Sport</h5>
+                    <p>$54,420</p>
+                    <div>
+                      <img class="pin-market" src="../assets/icons/pin-market.svg" alt="Estado de venda/locação" />
+                      <small>San Francisco</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="icons">
+                  <div class="icon">
+                    <img src="../assets/icons/dashboard.svg" alt="Quilometragem do veículo" />
+                    <span>35K mi</span>
+                  </div>
+
+                  <div class="icon">
+                    <img src="../assets/icons/gearbox.svg" alt="Transmissão do veículo" />
+                    <span>Hybrid</span>
+                  </div>
+
+                  <div class="icon">
+                    <img src="../assets/icons/petrol.svg" alt="Combustível de alimentação" />
+                    <span>Petrol</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="wrapper">
+                <div class="slider">
+                  <img class="show" src="../assets/images/slider-9-ultimos-1.png" alt="Ford Truck Lifted" />
+                </div>
+
+                <div class="icons">
+                  <img class="wishlist" src="../assets/icons/wishlist.svg" alt="Adicionar aos favoritos" />
+                  <img class="arrow-left" src="../assets/icons/arrow-left.svg" alt="Imagem anterior" />
+                  <img class="arrow-right" src="../assets/icons/arrow-right.svg" alt="Próxima imagem" />
+                </div>
+              </div>
+
+              <div class="label">
+                <div class="info info-label">Usado</div>
+              </div>
+
+              <div class="container">
+                <div class="content">
+                  <div class="info-header">
+                    <span>1995</span>
+
+                    <div class="checkbox">
+                      <label class="styled-checkbox">
+                        <input class="checkbox" type="checkbox" />
+                        <i class="checkbox-icon"></i>
+                        <span class="checkbox-text">Compare</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="info">
+                    <h5>Ford Truck Lifted</h5>
+                    <p>$24,000</p>
+                    <div>
+                      <img class="pin-market" src="../assets/icons/pin-market.svg" alt="Estado de venda/locação" />
+                      <small>Chicago</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="icons">
+                  <div class="icon">
+                    <img src="../assets/icons/dashboard.svg" alt="Quilometragem do veículo" />
+                    <span>278K mi</span>
+                  </div>
+
+                  <div class="icon">
+                    <img src="../assets/icons/gearbox.svg" alt="Transmissão do veículo" />
+                    <span>Manual</span>
+                  </div>
+
+                  <div class="icon">
+                    <img src="../assets/icons/petrol.svg" alt="Combustível de alimentação" />
+                    <span>Diesel</span>
+                  </div>
+                </div>
+              </div>
+            </article>
           </div>
 
-          <div class="subscribe">
-            <p>Envie-me por e-mail quedas de preços e novas listagens para estes resultados de pesquisa:</p>
-
-            <div class="input-group">
-              <i class="mail--icon"></i>
-              <input type="text" placeholder="Email" />
-              <button>Subscribe</button>
-            </div>
-
-            <label class="styled-checkbox">
-              <input class="checkbox" type="checkbox">
-              <i class="checkbox-icon"></i>
-              <span class="checkbox-text">Concordo em receber alertas de queda de preço neste veículo e informações
-                úteis sobre compras.</span>
-            </label>
+          <div class="icons">
+            <i class="arrow-wrapper arrow-left-wrapper"><img src="../assets/icons/arrow-left.svg" alt="" /></i>
+            <i class="arrow-wrapper arrow-right-wrapper"><img src="../assets/icons/arrow-right.svg" alt="" /></i>
           </div>
+
+          <div class="bullet-container"></div>
         </div>
-      </div>
-    </div>
-  </main>
-</body>
+      </section>
+      <!-- / ULTIMOS -->
+    </main>
 
+
+
+  </body>
 </html>

@@ -543,7 +543,7 @@ body {
   transition: all linear 0.3s;
 }
 
-.content-wrapper .content .wrapper .slider {
+.content-wrapper .content .wrapper .slider-gallery {
   min-width: 746px;
   min-height: 420px;
   height: 100%;
@@ -551,13 +551,13 @@ body {
   overflow: hidden;
 }
 
-.content-wrapper .content .wrapper .slider img {
+.content-wrapper .content .wrapper .slider-gallery img {
   display: none;
   max-width: 746px;
   max-height: 420px;
 }
 
-.content-wrapper .content .wrapper .slider img.show {
+.content-wrapper .content .wrapper .slider-gallery img.show {
   display: block;
   object-fit: cover;
 }

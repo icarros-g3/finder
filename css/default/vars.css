@@ -33,9 +33,9 @@
   --line-height-display: 1.3; /* 130% ou 73px */
 
   /********** BORDER-RADIUS **********/
-  --border-radius-sm: 6px;
-  --border-radius-base: 8px;
-  --border-radius-lg: 12px;
+  --border-radius-sm: 0.6rem;
+  --border-radius-base: 0.8rem;
+  --border-radius-lg: 1.2rem;
 
   /********** COLORS **********/
   --color-bg-primary: var(--color-gray-900);
@@ -53,6 +53,7 @@
   --color-blue-900: #282435;
 
   --color-gray-900: #1f1b2d;
+  --color-gray-900-50: #1f1b2d50;
   --color-gray-800: #454056;
   --color-gray-700: #666276;
   --color-gray-600: #9691a4;

@@ -28,8 +28,7 @@
 /* Main - Details */
 @import url(./components/details.css);
 
-/* Main - Ultimos */
-@import url(./components/ultimos.css);
+
 
 /* Main - Accessories & App */
 @import url(./components/accessories-app.css);
@@ -49,3 +48,8 @@
 /* Mini Header Catalogo*/
 @import url(./components/mini-header.css);
 
+/* Seller description */
+@import url(./components/seller-description.css);
+
+/* Main - Ultimos */
+@import url(./components/ultimos.css);
