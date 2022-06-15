@@ -6,6 +6,10 @@
   overflow: hidden;
 }
 
+.card.secondary {
+  max-height: 239px;
+}
+
 .card .label {
   position: absolute;
   top: 2rem;
