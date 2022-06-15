@@ -1,0 +1,115 @@
+.car-ad-description {
+  margin-top: 9.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.car-ad-icons {
+  width: 74.6rem;
+  height: 18.2rem;
+  display: flex;
+  background: var(--color-white-040);
+  border-radius: var(--border-radius-lg);
+  gap: 2.4rem;
+}
+
+.car-ad-description--icon {
+  width: 14.8rem;
+  height: 13.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1.2rem;
+}
+
+.car-ad-description--icon p {
+  font-size: var(--font-size-sm);
+  text-align: center;
+}
+
+.icon-adv {
+  display: block;
+  content: '';
+  width: 48px;
+  height: 48px;
+}
+
+.icon-ad-check {
+  background: url(../../assets/icons/check.svg) 0 0 no-repeat;
+}
+
+.icon-ad-wheel {
+  background: url(../../assets/icons/steering-wheel.svg) 0 0 no-repeat;
+}
+
+.icon-ad-driving {
+  background: url(../../assets/icons/driving-test.svg) 0 0 no-repeat;
+}
+
+.icon-ad-accident {
+  background: url(../../assets/icons/accident.svg) 0 0 no-repeat;
+}
+
+.icon-background {
+  background-color: var(--color-gray-900-50);
+  border-radius: var(--border-radius-lg);
+  height: 8rem;
+  width: 8rem;
+}
+
+.seller-description {
+  margin-top: 4.9rem;
+  width: 74.6rem;
+  height: 17.9rem;
+}
+
+.seller-description h2 {
+  line-height: var(--line-height-h4);
+  font-size: var(--font-size-h4);
+}
+
+.seller-description p {
+  margin-top: 2.4rem;
+  color: var(--color-white-700);
+}
+
+.seller-description .details-section--link {
+  display: inline-block;
+  margin-top: 0.4rem;
+}
+
+.icon-divider-horizontal {
+  background: url(../../assets/icons/divider-horizontal.svg) 0 0 no-repeat;
+  display: inline-block;
+  background-size: cover;
+  width: 746px;
+  height: 0px;
+  opacity: 0.15;
+  border: 1px solid #ffffff;
+  margin: 3.5rem 0 2.4rem 0;
+}
+
+
+.car-ad-footer {
+  margin-top: 2.4rem;
+  display: flex;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+  align-items: center;
+  color: var(--color-white-700);
+  gap: 16px;
+}
+
+.car-ad-footer .icon-divider {
+  opacity: 0.15;
+  width: 2rem;
+}
+
+.car-ad-footer--item {
+  display: flex;
+}
+
+.car-ad-footer--item p span {
+  font-weight: var(--font-weight-bold);
+}
