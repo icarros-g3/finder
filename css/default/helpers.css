@@ -32,18 +32,62 @@
 .margin-top-96 {
   margin-top: 96px;
 }
+
+.column {
+  display: flex;
+  flex-direction: column;
+  min-width: auto;
+}
+
+.row {
+  display: flex;
+  min-width: auto;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+/* ACCESSIBILITY */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 /********** HELPER CLASSES **********/
 
-/* NEW-BTN-TOGGLE && USED-BTN-TOGGLE */
-.new-btn--toggle,
-.used-btn--toggle {
+/* STYLED-NEW-BTN--TOGGLE && STYLED-USED-BTN--TOGGLE */
+.styled-new-btn--toggle,
+.styled-used-btn--toggle {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
-.new-btn--toggle label,
-.used-btn--toggle label {
+.styled-new-btn--toggle {
+  max-width: 72px;
+}
+
+.styled-used-btn--toggle {
+  max-width: 80px;
+}
+
+.styled-new-btn--toggle label,
+.styled-used-btn--toggle label {
+  display: flex;
+  flex: 1 1 100%;
+}
+
+.styled-new-btn--toggle span,
+.styled-used-btn--toggle span {
+  width: 100%;
   padding: 8px 16px;
   border: none;
   border-radius: var(--border-radius-base);
@@ -57,22 +101,21 @@
   transition: background-color 0.2s ease-in, color 0.2s ease-in, box-shadow 0.2s ease-in;
 }
 
-.new-btn--toggle input,
-.used-btn--toggle input {
+.styled-new-btn--toggle input,
+.styled-used-btn--toggle input {
   display: none;
 }
 
-.new-btn--toggle input:checked + label,
-.used-btn--toggle input:checked + label {
+.styled-new-btn--toggle label input:checked + span,
+.styled-used-btn--toggle label input:checked + span {
   background-color: var(--color-white);
   color: var(--color-primary);
   box-shadow: var(--shadow-large);
 }
-/* NEW-BTN-TOGGLE && USED-BTN-TOGGLE */
+/* STYLED-NEW-BTN--TOGGLE && STYLED-USED-BTN--TOGGLE */
 
 /* STYLED-CHECKBOX */
 .styled-checkbox {
-  cursor: pointer;
   user-select: none;
   display: flex;
   align-items: center;
@@ -179,17 +222,3 @@
   position: relative;
 }
 /* STYLED-TOGGLE */
-.column {
-  display: flex;
-  flex-direction: column;
-  min-width: auto;
-}
-
-.row {
-  display: flex;
-  min-width: auto;
-}
-
-.space-between {
-  justify-content: space-between;
-}
