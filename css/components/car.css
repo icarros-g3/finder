@@ -41,6 +41,16 @@
   height: 1.8rem;
 }
 
+.rotate-icon-left {
+  transform: rotate(90deg)
+}
+
+.rotate-icon-right {
+  transform: rotate(-90deg)
+}
+
+
+
 .car-header .breadcrumb p {
   cursor: pointer;
 }
