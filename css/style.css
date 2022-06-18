@@ -4,6 +4,10 @@
 /* Helpers css */
 @import url(./default/helpers.css);
 
+/* -------------------- */
+/*  Page - index.html   */
+/* -------------------- */
+
 /* Cards css */
 @import url(./components/cards.css);
 
@@ -28,7 +32,8 @@
 /* Main - Details */
 @import url(./components/details.css);
 
-
+/* Main - Ultimos */
+@import url(./components/ultimos.css);
 
 /* Main - Accessories & App */
 @import url(./components/accessories-app.css);
@@ -39,17 +44,25 @@
 /* Footer */
 @import url(./components/footer.css);
 
-/* Interna carro */
-@import url(./components/car.css);
+/* -------------------- */
+/* Page - catalog.html  */
+/* -------------------- */
 
-/* Catalogo */
+/*  Main - Sidebar */
+@import url(./components/sidebar.css);
+
+/* Main - Catalogo */
 @import url(./components/catalog.css);
 
 /* Mini Header Catalogo*/
 @import url(./components/mini-header.css);
 
+/* -------------------- */
+/*   Page - car.html    */
+/* -------------------- */
+
+/* Interna carro */
+@import url(./components/car.css);
+
 /* Seller description */
 @import url(./components/seller-description.css);
-
-/* Main - Ultimos */
-@import url(./components/ultimos.css);

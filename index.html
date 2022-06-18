@@ -52,14 +52,14 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Finder</title>
   </head>
-  <body>
+  <body class="body-image">
     <!-- HEADER -->
     <header class="header center-page-content center-content">
       <a href="#" class="logo-container">
-        <img src="./assets/icons/logo.svg" alt="Finder logo" width="116px" height="auto" />
+        <img src="./assets/icons/logo.svg" alt="Finder logo" width="116px" height="32px" />
       </a>
 
-      <nav class="navbar">
+      <nav class="navbar" aria-label="Main Menu" role="navigation">
         <ul class="navbar-list">
           <li class="navbar-item"><a href="#novos" class="navbar-link">Novos</a></li>
           <li class="navbar-item"><a href="#usados" class="navbar-link">Usados</a></li>
@@ -103,43 +103,60 @@
       <!-- SEARCHBAR -->
       <section class="search">
         <div class="search-tabs">
-          <span class="new-btn--toggle">
-            <input type="checkbox" name="novo" id="novo" checked />
-            <label for="novo">Novo</label>
+          <span class="styled-new-btn--toggle">
+            <label for="new">
+              <input type="checkbox" name="new" id="new" checked />
+              <span>Novo</span>
+            </label>
           </span>
 
-          <span class="used-btn--toggle">
-            <input type="checkbox" name="usado" id="usado" />
-            <label for="usado">Usado</label>
+          <span class="styled-used-btn--toggle">
+            <label for="used">
+              <input type="checkbox" name="used" id="used" />
+              <span>Usado</span>
+            </label>
           </span>
         </div>
+
         <div class="searchbar">
-          <form action="submit" class="searchbar-form">
+          <form action="submit" class="searchbar-form" id="searchbar-form">
             <div class="searchbar-field">
               <i class="searchbar-field-icon search--icon"></i>
-              <input type="text" placeholder="Pesquise por...." />
+
+              <label class="visually-hidden" for="search">Pesquisar</label>
+              <input type="text" placeholder="Pesquise por...." id="search" name="search" />
             </div>
             <div class="searchbar-field">
               <i class="searchbar-field-icon star--icon"></i>
-              <select name="marca" id="marca">
+
+              <label class="visually-hidden" for="brand">Marca</label>
+              <select name="brand" id="brand">
                 <option value="" selected>Marca</option>
               </select>
             </div>
+
             <div class="searchbar-field">
               <i class="searchbar-field-icon model--icon"></i>
-              <select name="modelo" id="modelo">
+
+              <label class="visually-hidden" for="model">Modelo</label>
+              <select name="model" id="model">
                 <option value="" selected>Modelo</option>
               </select>
             </div>
             <div class="searchbar-field">
               <i class="searchbar-field-icon car--icon"></i>
-              <select name="tipo" id="tipo">
+
+              <label class="visually-hidden" for="type">Tipo</label>
+              <select name="type" id="type">
                 <option value="" selected>Tipo</option>
               </select>
             </div>
+
             <div class="searchbar-field">
               <i class="searchbar-field-icon location--icon"></i>
-              <select name="local" id="local">
+
+              <label class="visually-hidden" for="location">Local</label>
+              <select name="location" id="location">
                 <option value="" selected>Local</option>
               </select>
             </div>
@@ -261,8 +278,8 @@
                   <span>2014</span>
 
                   <div class="checkbox">
-                    <label class="styled-checkbox">
-                      <input class="checkbox" type="checkbox" />
+                    <label class="styled-checkbox" for="offer-option-1">
+                      <input class="checkbox" type="checkbox" name="offer" id="offer-option-1" value="" />
                       <i class="checkbox-icon"></i>
                       <span class="checkbox-text">Compare</span>
                     </label>
@@ -327,8 +344,8 @@
                   <span>1995</span>
 
                   <div class="checkbox">
-                    <label class="styled-checkbox">
-                      <input class="checkbox" type="checkbox" />
+                    <label class="styled-checkbox" for="offer-option-2">
+                      <input class="checkbox" type="checkbox" name="offer" id="offer-option-2" value="" />
                       <i class="checkbox-icon"></i>
                       <span class="checkbox-text">Compare</span>
                     </label>
@@ -393,8 +410,8 @@
                   <span>2020</span>
 
                   <div class="checkbox">
-                    <label class="styled-checkbox">
-                      <input class="checkbox" type="checkbox" />
+                    <label class="styled-checkbox" for="offer-option-3">
+                      <input class="checkbox" type="checkbox" name="offer" id="offer-option-3" value="" />
                       <i class="checkbox-icon"></i>
                       <span class="checkbox-text">Compare</span>
                     </label>
@@ -534,16 +551,21 @@
           <h3>Últimos publicados</h3>
           <div class="ultimos-section-actions center-content">
             <div class="actions-buttons center-content">
-              <span class="new-btn--toggle">
-                <input type="checkbox" name="novo2" id="novo2" />
-                <label for="novo2">Novo</label>
+              <span class="styled-new-btn--toggle">
+                <label for="new2">
+                  <input type="checkbox" name="new2" id="new2" />
+                  <span>Novo</span>
+                </label>
               </span>
 
-              <span class="used-btn--toggle">
-                <input type="checkbox" name="usado2" id="usado2" checked />
-                <label for="usado2">Usado</label>
+              <span class="styled-used-btn--toggle">
+                <label for="used2">
+                  <input type="checkbox" name="used2" id="used2" checked />
+                  <span>Usado</span>
+                </label>
               </span>
             </div>
+
             <a href="#" class="ultimos-section--link center-content">
               <span>Ver todos</span>
               <i class="ultimos-section--icon arrow-right-icon"></i>
@@ -578,8 +600,8 @@
                     <span>2019</span>
 
                     <div class="checkbox">
-                      <label class="styled-checkbox">
-                        <input class="checkbox" type="checkbox" />
+                      <label class="styled-checkbox" for="latest-offer-option-1">
+                        <input class="checkbox" type="checkbox" name="latest-offer" id="latest-offer-option-1" value="" />
                         <i class="checkbox-icon"></i>
                         <span class="checkbox-text">Compare</span>
                       </label>
@@ -637,10 +659,10 @@
                 <div class="content">
                   <div class="info-header">
                     <span>2019</span>
-                    
+
                     <div class="checkbox">
-                      <label class="styled-checkbox">
-                        <input class="checkbox" type="checkbox" />
+                      <label class="styled-checkbox" for="latest-offer-option-2">
+                        <input class="checkbox" type="checkbox" name="latest-offer" id="latest-offer-option-2" value="" />
                         <i class="checkbox-icon"></i>
                         <span class="checkbox-text">Compare</span>
                       </label>
@@ -699,13 +721,13 @@
                   <div class="info-header">
                     <span>2019</span>
 
-                  <div class="checkbox">
-                    <label class="styled-checkbox">
-                      <input class="checkbox" type="checkbox" />
-                      <i class="checkbox-icon"></i>
-                      <span class="checkbox-text">Compare</span>
-                    </label>
-                  </div>
+                    <div class="checkbox">
+                      <label class="styled-checkbox" for="latest-offer-option-3">
+                        <input class="checkbox" type="checkbox" name="latest-offer" id="latest-offer-option-3" value="" />
+                        <i class="checkbox-icon"></i>
+                        <span class="checkbox-text">Compare</span>
+                      </label>
+                    </div>
                   </div>
 
                   <div class="info">
@@ -762,8 +784,8 @@
                     <span>2019</span>
 
                     <div class="checkbox">
-                      <label class="styled-checkbox">
-                        <input class="checkbox" type="checkbox" />
+                      <label class="styled-checkbox" for="latest-offer-option-4">
+                        <input class="checkbox" type="checkbox" name="latest-offer" id="latest-offer-option-4" value="" />
                         <i class="checkbox-icon"></i>
                         <span class="checkbox-text">Compare</span>
                       </label>
@@ -823,8 +845,8 @@
                     <span>2017</span>
 
                     <div class="checkbox">
-                      <label class="styled-checkbox">
-                        <input class="checkbox" type="checkbox" />
+                      <label class="styled-checkbox" for="latest-offer-option-5">
+                        <input class="checkbox" type="checkbox" name="latest-offer" id="latest-offer-option-5" value="" />
                         <i class="checkbox-icon"></i>
                         <span class="checkbox-text">Compare</span>
                       </label>
@@ -884,8 +906,8 @@
                     <span>2019</span>
 
                     <div class="checkbox">
-                      <label class="styled-checkbox">
-                        <input class="checkbox" type="checkbox" />
+                      <label class="styled-checkbox" for="latest-offer-option-6">
+                        <input class="checkbox" type="checkbox" name="latest-offer" id="latest-offer-option-6" value="" />
                         <i class="checkbox-icon"></i>
                         <span class="checkbox-text">Compare</span>
                       </label>
@@ -945,8 +967,8 @@
                     <span>2018</span>
 
                     <div class="checkbox">
-                      <label class="styled-checkbox">
-                        <input class="checkbox" type="checkbox" />
+                      <label class="styled-checkbox" for="latest-offer-option-7">
+                        <input class="checkbox" type="checkbox" name="latest-offer" id="latest-offer-option-7" value="" />
                         <i class="checkbox-icon"></i>
                         <span class="checkbox-text">Compare</span>
                       </label>
@@ -1006,8 +1028,8 @@
                     <span>2018</span>
 
                     <div class="checkbox">
-                      <label class="styled-checkbox">
-                        <input class="checkbox" type="checkbox" />
+                      <label class="styled-checkbox" for="latest-offer-option-8">
+                        <input class="checkbox" type="checkbox" name="latest-offer" id="latest-offer-option-8" value="" />
                         <i class="checkbox-icon"></i>
                         <span class="checkbox-text">Compare</span>
                       </label>
@@ -1066,8 +1088,8 @@
                     <span>1995</span>
 
                     <div class="checkbox">
-                      <label class="styled-checkbox">
-                        <input class="checkbox" type="checkbox" />
+                      <label class="styled-checkbox" for="latest-offer-option-9">
+                        <input class="checkbox" type="checkbox" name="latest-offer" id="latest-offer-option-9" value="" />
                         <i class="checkbox-icon"></i>
                         <span class="checkbox-text">Compare</span>
                       </label>
@@ -1304,7 +1326,7 @@
       </div>
 
       <section class="footer-section">
-        <div class="footer-content">
+        <nav class="footer-content" role="navigation">
           <div class="footer-newsletter">
             <h2>Cadastre-se na newsletter</h2>
             <p>Não perca nenhuma oferta relevante!</p>
@@ -1404,7 +1426,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </nav>
       </section>
 
       <div class="footer-copyright">
