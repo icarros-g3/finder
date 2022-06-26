@@ -57,7 +57,7 @@ leftArrow.forEach((arrow, index) => {
 let sizeWindow = window.screen.width;
 
 // controles wrapper
-let arrowWrapper = document.querySelectorAll('.arrow-wrapper');
+let arrowWrapper = document.querySelectorAll('.arrow-indicator-wrapper');
 
 // elementos wrapper
 let card = document.querySelectorAll('.wrapper-slider .card');
@@ -134,28 +134,34 @@ function showBullet() {
   bullets[currentBullet].classList.add('active');
 }
 
-arrowWrapper[1].onclick = () => {
-  rightMove();
-  currentBullet++;
+function controlArrowsClick() {
+  if (!arrowWrapper.length) return;
 
-  if (currentBullet < bullets.length) {
-    hideBullet();
-    showBullet();
-  } else {
-    currentBullet = bullets.length - 1;
-  }
-};
-arrowWrapper[0].onclick = () => {
-  leftMove();
-  currentBullet--;
+  arrowWrapper[1].onclick = () => {
+    rightMove();
+    currentBullet++;
 
-  if (currentBullet >= 0) {
-    hideBullet();
-    showBullet();
-  } else {
-    currentBullet = 0;
-  }
-};
+    if (currentBullet < bullets.length) {
+      hideBullet();
+      showBullet();
+    } else {
+      currentBullet = bullets.length - 1;
+    }
+  };
+  arrowWrapper[0].onclick = () => {
+    leftMove();
+    currentBullet--;
+
+    if (currentBullet >= 0) {
+      hideBullet();
+      showBullet();
+    } else {
+      currentBullet = 0;
+    }
+  };
+}
+
+this.controlArrowsClick();
 
 bullets.forEach((bullet, index) => {
   bullet.addEventListener('click', () => {
@@ -170,3 +176,186 @@ bullets.forEach((bullet, index) => {
     showBullet();
   });
 });
+
+/********** CATALOG - FILTERS **********/
+const BASE_URL = 'https://e-carros-api.herokuapp.com';
+const brands = [];
+const colors = [];
+const fuels = [];
+const mileages = [];
+const conditions = [];
+const types = [];
+const transmissions = [];
+const additionals = [];
+const adverts = [];
+
+function getBrands() {
+  fetch(`${BASE_URL}/brands`)
+    .then(response => response.json())
+    .then(resp => brands.push(...resp))
+    // .then(() => console.log(brands))
+    .then(() => {
+      const brandsSearchbarField = document.getElementById('brand');
+      if (brandsSearchbarField) {
+        brandsSearchbarField.innerHTML = `
+        <option value="" selected>Marca</option>
+        ${brands
+          .map(
+            brand => `
+          <option value=${brand.name}>${brand.name}</option>
+        `,
+          )
+          .join('')}`;
+      }
+    });
+}
+getBrands();
+
+function getColors() {
+  fetch(`${BASE_URL}/colors`)
+    .then(response => response.json())
+    .then(resp => colors.push(...resp));
+  // .then(() => console.log(colors));
+}
+getColors();
+
+function getFuel() {
+  fetch(`${BASE_URL}/fuel`)
+    .then(response => response.json())
+    .then(resp => fuels.push(...resp));
+  // .then(() => console.log(fuels));
+}
+getFuel();
+
+function getMileage() {
+  fetch(`${BASE_URL}/mileage`)
+    .then(response => response.json())
+    .then(resp => mileages.push(...resp))
+    // .then(() => console.log(mileages))
+    .then(() => {
+      const mileagesSearchbarField = document.getElementById('mileage');
+      if (mileagesSearchbarField) {
+        mileagesSearchbarField.innerHTML = `
+        <option value="" selected>Todas</option>
+        ${mileages
+          .map(
+            mileage => `
+          <option value=${mileage}>${mileage}</option>
+        `,
+          )
+          .join('')}`;
+      }
+    });
+}
+getMileage();
+
+function getCondition() {
+  fetch(`${BASE_URL}/condition`)
+    .then(response => response.json())
+    .then(resp => conditions.push(...resp));
+  // .then(() => console.log(conditions));
+}
+getCondition();
+
+function getType() {
+  fetch(`${BASE_URL}/cartype`)
+    .then(response => response.json())
+    .then(resp => types.push(...resp))
+    // .then(() => console.log(types))
+    .then(() => {
+      const typesSearchbarField = document.getElementById('type');
+      if (typesSearchbarField) {
+        typesSearchbarField.innerHTML = `
+        <option value="" selected>Tipo</option>
+        ${types
+          .map(
+            type => `
+          <option value=${type}>${type}</option>
+        `,
+          )
+          .join('')}`;
+      }
+    });
+}
+getType();
+
+function getTransmission() {
+  fetch(`${BASE_URL}/transmission`)
+    .then(response => response.json())
+    .then(resp => transmissions.push(...resp));
+  // .then(() => console.log(transmissions));
+}
+getTransmission();
+
+function getAdditional() {
+  fetch(`${BASE_URL}/additional`)
+    .then(response => response.json())
+    .then(resp => additionals.push(...resp));
+  // .then(() => console.log(additionals));
+}
+getAdditional();
+
+function getAdverts() {
+  fetch(`${BASE_URL}/adverts`)
+    .then(response => response.json())
+    .then(resp => adverts.push(...resp));
+  // .then(() => console.log(adverts));
+}
+getAdverts();
+
+/********** SEARCHBAR SUBMIT HANDLER **********/
+const searchbarForm = document.getElementById('searchbar-form');
+function handleSearchbarSubmit() {
+  if (!searchbarForm) return;
+
+  searchbarForm.addEventListener('submit', event => {
+    event.preventDefault();
+    // console.warn(event);
+  });
+}
+this.handleSearchbarSubmit();
+
+/********** CATALOG - LIST **********/
+const catalogList = document.getElementById('catalog-list');
+const cards = document.querySelectorAll('#catalog-list .card');
+const showInlineCatalogList = document.getElementById('show-inline');
+const showColumnCatalogList = document.getElementById('show-column');
+const offersCounter = document.getElementById('offers-counter');
+
+function handleCountOffers() {
+  if (offersCounter) {
+    offersCounter.innerHTML = cards.length;
+  }
+}
+this.handleCountOffers();
+
+function handleInLineCatalogList() {
+  if (showInlineCatalogList) {
+    showInlineCatalogList.onclick = e => {
+      if (cards) {
+        cards.forEach(card => card.classList.add('secondary'));
+      }
+      showColumnCatalogList.classList.remove('active');
+      showInlineCatalogList.classList.add('active');
+      showInlineCatalogList.setAttribute('aria-pressed', 'true');
+      showColumnCatalogList.setAttribute('aria-pressed', 'false');
+    };
+  }
+}
+this.handleInLineCatalogList();
+
+function handleColumnCatalogList() {
+  if (showColumnCatalogList) {
+    showColumnCatalogList.onclick = e => {
+      if (cards) {
+        cards.forEach(card => card.classList.remove('secondary'));
+        e;
+      }
+      showInlineCatalogList.classList.remove('active');
+      showColumnCatalogList.classList.add('active');
+      showColumnCatalogList.setAttribute('aria-pressed', 'true');
+      showInlineCatalogList.setAttribute('aria-pressed', 'false');
+    };
+  }
+}
+this.handleColumnCatalogList();

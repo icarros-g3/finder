@@ -64,31 +64,6 @@ img {
   object-fit: cover;
 }
 
-/* SCROLLBAR STYLE */
-
-/* https://www.digitalocean.com/community/tutorials/css-scrollbars-pt */
-/* https://stackoverflow.com/questions/50817727/change-scrollbar-height */
-/* * {
-  scrollbar-width: thin;
-  scrollbar-color: var(--color-white) var(--color-white-150);
-} */
-
-/* *::-webkit-scrollbar {
-  width: 3px;
-  transition: all 0.2s ease-in;
-}
-
-*::-webkit-scrollbar-track {
-  background: var(--color-white-150);
-  border-radius: 20px;
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: var(--color-white);
-  border-radius: 20px;
-  border: 3px solid var(--color-white);
-} */
-
 /* INPUT TYPE NUMBER */
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,

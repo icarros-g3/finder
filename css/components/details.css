@@ -9,7 +9,7 @@
   margin-bottom: 72px;
 }
 
-.details-header h3 {
+.details-header h1 {
   color: var(--color-white);
   font-size: var(--font-size-h3);
   line-height: var(--line-height-h3);

@@ -29,8 +29,9 @@
 
 .header .navbar .navbar-list::before {
   content: '';
+  width: 1px;
   height: 24px;
-  border: 1px solid var(--color-white-150);
+  background-color: var(--color-white-150);
 }
 
 .header .navbar .navbar-list .navbar-item {
