@@ -6,21 +6,25 @@
 }
 
 .car-ad-icons {
-  width: 74.6rem;
-  height: 18.2rem;
   display: flex;
   background: var(--color-white-040);
   border-radius: var(--border-radius-lg);
   gap: 2.4rem;
+  max-width: 74.6rem;
+  width: 100%;
+  padding: 24px 42px;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .car-ad-description--icon {
-  width: 14.8rem;
-  height: 13.4rem;
+  max-width: 14.8rem;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 1.2rem;
+  flex: 1 1 147px;
 }
 
 .car-ad-description--icon p {
@@ -60,13 +64,14 @@
 
 .seller-description {
   margin-top: 4.9rem;
-  width: 74.6rem;
-  height: 17.9rem;
+  max-width: 74.6rem;
+  width: 100%;
 }
 
-.seller-description h2 {
+.seller-description h1 {
   line-height: var(--line-height-h4);
   font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-bold);
 }
 
 .seller-description p {
@@ -77,6 +82,8 @@
 .seller-description .details-section--link {
   display: inline-block;
   margin-top: 0.4rem;
+  text-decoration: underline;
+  color: var(--color-primary);
 }
 
 .icon-divider-horizontal {
@@ -87,12 +94,12 @@
   height: 0px;
   opacity: 0.15;
   border: 1px solid #ffffff;
-  margin: 3.5rem 0 2.4rem 0;
+  margin: 3.1rem 0 2.4rem 0;
+  max-width: 746px;
+  width: 100%;
 }
 
-
 .car-ad-footer {
-  margin-top: 2.4rem;
   display: flex;
   font-size: var(--font-size-sm);
   line-height: var(--line-height-sm);

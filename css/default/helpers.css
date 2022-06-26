@@ -48,6 +48,13 @@
   justify-content: space-between;
 }
 
+.text-truncate {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 /* ACCESSIBILITY */
 .visually-hidden {
   position: absolute;
@@ -160,6 +167,10 @@
   line-height: var(--line-height-sm);
   font-weight: var(--font-weight-regular);
   margin-left: 4px;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 /* STYLED-CHECKBOX */
 

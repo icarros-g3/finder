@@ -116,7 +116,7 @@
   align-items: center;
   justify-content: flex-start;
   flex: 1 1 100%;
-  padding: 8px;
+  padding: 7px 8px;
   border: 1px solid var(--color-white-120);
   border-radius: var(--border-radius-base);
   background-color: var(--color-white-040);
@@ -146,7 +146,6 @@
   margin: 0 8px;
   width: 100%;
   padding: 0 8px;
-  border-radius: var(--border-radius-base);
   background-color: transparent;
   border: none;
   color: inherit;
@@ -163,6 +162,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  -webkit-transition: background-color 0.2s ease-in;
+  -moz-transition: background-color 0.2s ease-in;
+  -o-transition: background-color 0.2s ease-in;
+  transition: background-color 0.2s ease-in;
+}
+
+.footer .footer-section .footer-content .footer-newsletter .newsletter-input-container button:hover {
+  background-color: var(--color-white);
+}
+
+.footer .footer-section .footer-content .footer-newsletter .newsletter-input-container button:hover > .send--icon {
+  background-color: var(--color-primary);
 }
 
 .footer .footer-section .footer-content .footer-newsletter .newsletter-input-container button .send--icon {
@@ -177,6 +188,10 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: cover;
   mask-size: cover;
+  -webkit-transition: background-color 0.2s ease-in;
+  -moz-transition: background-color 0.2s ease-in;
+  -o-transition: background-color 0.2s ease-in;
+  transition: background-color 0.2s ease-in;
 }
 
 .footer .footer-section .footer-content .footer-lists-wrapper {
@@ -268,17 +283,17 @@
   font-weight: var(--font-weight-regular);
 }
 
-.footer .footer-section .footer-content .footer-contacts .footer-contacts-media {
+.footer .footer-section .footer-content .footer-contacts .footer-contacts-media .footer-contacts-list {
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 
-.footer .footer-section .footer-content .footer-contacts .footer-contacts-media > .contacts-media-container:not(:last-child) {
+.footer .footer-section .footer-content .footer-contacts .footer-contacts-media > .footer-contacts-list .footer-contacts-item:not(:last-child) {
   margin-right: 8px;
 }
 
-.footer .footer-section .footer-content .footer-contacts .footer-contacts-media .contacts-media-container {
+.footer .footer-section .footer-content .footer-contacts .footer-contacts-media .footer-contacts-item .footer-contacts-link {
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -286,10 +301,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
 }
 
-.footer .footer-section .footer-content .footer-contacts .footer-contacts-media .contacts-media-container i {
+.footer .footer-section .footer-content .footer-contacts .footer-contacts-media .footer-contacts-item .footer-contacts-link i {
   width: 100%;
   height: 14px;
   max-width: 14px;
@@ -301,38 +315,39 @@
   mask-size: cover;
 }
 
-.footer .footer-section .footer-content .footer-contacts .footer-contacts-media .contacts-media-container,
-.footer .footer-section .footer-content .footer-contacts .footer-contacts-media .contacts-media-container i {
+.footer .footer-section .footer-content .footer-contacts .footer-contacts-media .footer-contacts-item,
+.footer .footer-section .footer-content .footer-contacts .footer-contacts-media .footer-contacts-item .footer-contacts-link,
+.footer .footer-section .footer-content .footer-contacts .footer-contacts-media .footer-contacts-item i {
   -webkit-transition: color 0.2s ease-in, background-color 0.2s ease-in;
   -moz-transition: color 0.2s ease-in, background-color 0.2s ease-in;
   -o-transition: color 0.2s ease-in, background-color 0.2s ease-in;
   transition: color 0.2s ease-in, background-color 0.2s ease-in;
 }
 
-.footer .footer-section .footer-content .footer-contacts .footer-contacts-media .contacts-media-container:hover {
+.footer .footer-section .footer-content .footer-contacts .footer-contacts-media .footer-contacts-item:hover > .footer-contacts-link {
   background-color: var(--color-white);
 }
 
-.footer .footer-section .footer-content .footer-contacts .footer-contacts-media .contacts-media-container:hover i {
+.footer .footer-section .footer-content .footer-contacts .footer-contacts-media .footer-contacts-item:hover i {
   background-color: var(--color-primary);
 }
 
-.footer .footer-section .footer-content .footer-contacts .footer-contacts-media .contacts-media-container .facebook--icon {
+.footer .footer-section .footer-content .footer-contacts .footer-contacts-media .footer-contacts-item .facebook--icon {
   mask-image: url(../../assets/icons/facebook.svg);
   -webkit-mask-image: url(../../assets/icons/facebook.svg);
 }
 
-.footer .footer-section .footer-content .footer-contacts .footer-contacts-media .contacts-media-container .twitter--icon {
+.footer .footer-section .footer-content .footer-contacts .footer-contacts-media .footer-contacts-item .twitter--icon {
   mask-image: url(../../assets/icons/twitter.svg);
   -webkit-mask-image: url(../../assets/icons/twitter.svg);
 }
 
-.footer .footer-section .footer-content .footer-contacts .footer-contacts-media .contacts-media-container .telegram--icon {
+.footer .footer-section .footer-content .footer-contacts .footer-contacts-media .footer-contacts-item .telegram--icon {
   mask-image: url(../../assets/icons/telegram.svg);
   -webkit-mask-image: url(../../assets/icons/telegram.svg);
 }
 
-.footer .footer-section .footer-content .footer-contacts .footer-contacts-media .contacts-media-container .messenger--icon {
+.footer .footer-section .footer-content .footer-contacts .footer-contacts-media .footer-contacts-item .messenger--icon {
   mask-image: url(../../assets/icons/messenger.svg);
   -webkit-mask-image: url(../../assets/icons/messenger.svg);
 }

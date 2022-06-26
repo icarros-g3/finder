@@ -15,7 +15,7 @@
   align-items: center;
   flex: 1 1 100%;
   max-width: var(--main-width);
-  padding: 8px;
+  padding: 7px 8px;
   background: var(--color-white-040);
   border: 1px solid var(--color-white-120);
   border-radius: var(--border-radius-base);
@@ -25,17 +25,47 @@
   display: flex;
   flex: 1 1 100%;
   align-items: center;
-  margin-left: 10px;
+  margin-left: 20px;
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-base);
   color: var(--color-white-500);
+  max-width: 200px;
+}
+
+.main .search .searchbar .searchbar-field.search-input {
+  max-width: 100%;
 }
 
 .main .search .searchbar .searchbar-field:not(:last-of-type)::after {
   content: '';
+  width: 1px;
   height: 40px;
-  border: 1px solid var(--color-white-150);
+  background-color: var(--color-white-150);
+}
+
+.main .search .searchbar .searchbar-field .searchbar-field__wrapper--select {
+  position: relative;
+  width: 100%;
+}
+
+.main .search .searchbar .searchbar-field .searchbar-field__wrapper--select .chevron--icon {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 16px;
+  max-width: 16px;
+  min-width: 16px;
+  background-color: var(--color-white-500);
+  mask-image: url(../../assets/icons/chevron.svg);
+  -webkit-mask-image: url(../../assets/icons/chevron.svg);
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-size: cover;
+  -webkit-mask-size: cover;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
 }
 
 .main .search .searchbar .searchbar-field .searchbar-field-icon {
@@ -104,13 +134,26 @@
   background-color: transparent;
   border: none;
   height: 40px;
-  margin-right: 20px;
   width: 100%;
+}
+
+.main .search .searchbar .searchbar-field select {
+  appearance: none;
+  padding: 0 8px;
+}
+
+.main .search .searchbar .searchbar-field select option {
+  color: var(--color-bg-primary);
+}
+
+.main .search .searchbar .searchbar-field input,
+.main .search .searchbar .searchbar-field .searchbar-field__wrapper--select {
+  margin-right: 20px;
   margin-left: 8px;
 }
 
 .main .search .searchbar .searchbar-field input {
-  padding: 0 10px;
+  padding: 0 8px;
 }
 
 .main .search .searchbar .search-btn {
@@ -124,6 +167,8 @@
   background-color: var(--color-primary);
   user-select: none;
   cursor: pointer;
+  max-width: 142px;
+  width: 100%;
   -webkit-transition: color 0.2s ease-in, background-color 0.2s ease-in;
   -moz-transition: color 0.2s ease-in, background-color 0.2s ease-in;
   -o-transition: color 0.2s ease-in, background-color 0.2s ease-in;
