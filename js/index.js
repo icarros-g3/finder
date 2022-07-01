@@ -160,7 +160,6 @@ function controlArrowsClick() {
     }
   };
 }
-
 this.controlArrowsClick();
 
 bullets.forEach((bullet, index) => {
@@ -177,132 +176,6 @@ bullets.forEach((bullet, index) => {
   });
 });
 
-/********** CATALOG - FILTERS **********/
-const BASE_URL = 'https://e-carros-api.herokuapp.com';
-const brands = [];
-const colors = [];
-const fuels = [];
-const mileages = [];
-const conditions = [];
-const types = [];
-const transmissions = [];
-const additionals = [];
-const adverts = [];
-
-function getBrands() {
-  fetch(`${BASE_URL}/brands`)
-    .then(response => response.json())
-    .then(resp => brands.push(...resp))
-    // .then(() => console.log(brands))
-    .then(() => {
-      const brandsSearchbarField = document.getElementById('brand');
-      if (brandsSearchbarField) {
-        brandsSearchbarField.innerHTML = `
-        <option value="" selected>Marca</option>
-        ${brands
-          .map(
-            brand => `
-          <option value=${brand.name}>${brand.name}</option>
-        `,
-          )
-          .join('')}`;
-      }
-    });
-}
-getBrands();
-
-function getColors() {
-  fetch(`${BASE_URL}/colors`)
-    .then(response => response.json())
-    .then(resp => colors.push(...resp));
-  // .then(() => console.log(colors));
-}
-getColors();
-
-function getFuel() {
-  fetch(`${BASE_URL}/fuel`)
-    .then(response => response.json())
-    .then(resp => fuels.push(...resp));
-  // .then(() => console.log(fuels));
-}
-getFuel();
-
-function getMileage() {
-  fetch(`${BASE_URL}/mileage`)
-    .then(response => response.json())
-    .then(resp => mileages.push(...resp))
-    // .then(() => console.log(mileages))
-    .then(() => {
-      const mileagesSearchbarField = document.getElementById('mileage');
-      if (mileagesSearchbarField) {
-        mileagesSearchbarField.innerHTML = `
-        <option value="" selected>Todas</option>
-        ${mileages
-          .map(
-            mileage => `
-          <option value=${mileage}>${mileage}</option>
-        `,
-          )
-          .join('')}`;
-      }
-    });
-}
-getMileage();
-
-function getCondition() {
-  fetch(`${BASE_URL}/condition`)
-    .then(response => response.json())
-    .then(resp => conditions.push(...resp));
-  // .then(() => console.log(conditions));
-}
-getCondition();
-
-function getType() {
-  fetch(`${BASE_URL}/cartype`)
-    .then(response => response.json())
-    .then(resp => types.push(...resp))
-    // .then(() => console.log(types))
-    .then(() => {
-      const typesSearchbarField = document.getElementById('type');
-      if (typesSearchbarField) {
-        typesSearchbarField.innerHTML = `
-        <option value="" selected>Tipo</option>
-        ${types
-          .map(
-            type => `
-          <option value=${type}>${type}</option>
-        `,
-          )
-          .join('')}`;
-      }
-    });
-}
-getType();
-
-function getTransmission() {
-  fetch(`${BASE_URL}/transmission`)
-    .then(response => response.json())
-    .then(resp => transmissions.push(...resp));
-  // .then(() => console.log(transmissions));
-}
-getTransmission();
-
-function getAdditional() {
-  fetch(`${BASE_URL}/additional`)
-    .then(response => response.json())
-    .then(resp => additionals.push(...resp));
-  // .then(() => console.log(additionals));
-}
-getAdditional();
-
-function getAdverts() {
-  fetch(`${BASE_URL}/adverts`)
-    .then(response => response.json())
-    .then(resp => adverts.push(...resp));
-  // .then(() => console.log(adverts));
-}
-getAdverts();
-
 /********** SEARCHBAR SUBMIT HANDLER **********/
 const searchbarForm = document.getElementById('searchbar-form');
 function handleSearchbarSubmit() {
@@ -310,52 +183,67 @@ function handleSearchbarSubmit() {
 
   searchbarForm.addEventListener('submit', event => {
     event.preventDefault();
-    // console.warn(event);
   });
 }
 this.handleSearchbarSubmit();
 
-/********** CATALOG - LIST **********/
-const catalogList = document.getElementById('catalog-list');
-const cards = document.querySelectorAll('#catalog-list .card');
-const showInlineCatalogList = document.getElementById('show-inline');
-const showColumnCatalogList = document.getElementById('show-column');
-const offersCounter = document.getElementById('offers-counter');
+/********** HEADER - NAVBAR **********/
+const menuIcon = document.getElementById('menuIcon');
+const mainNav = document.getElementById('desktopNav');
+const mobileNav = document.getElementById('mobileNav');
+const mainHeader = document.getElementById('mainHeader');
 
-function handleCountOffers() {
-  if (offersCounter) {
-    offersCounter.innerHTML = cards.length;
-  }
+function handleMobileMenuState() {
+  if (!menuIcon) return;
+
+  menuIcon.onclick = e => {
+    // e.stopPropagation();
+    // e.preventDefault();
+
+    const ariaChecked = menuIcon.getAttribute('aria-checked');
+    if (ariaChecked === 'true') {
+      menuIcon.classList.remove('triggered');
+      menuIcon.setAttribute('aria-checked', 'false');
+      // document.querySelector('.logo-container').style.position = 'static';
+      // document.querySelector('.logo-container').style.left = '0';
+
+      mobileNav.classList.remove('overlay');
+    } else {
+      menuIcon.classList.add('triggered');
+      // document.querySelector('.logo-container').style.position = 'fixed';
+      // document.querySelector('.logo-container').style.left = '24px';
+
+      menuIcon.setAttribute('aria-checked', 'true');
+      mobileNav.classList.add('overlay');
+    }
+  };
 }
-this.handleCountOffers();
+handleMobileMenuState();
 
-function handleInLineCatalogList() {
-  if (showInlineCatalogList) {
-    showInlineCatalogList.onclick = e => {
-      if (cards) {
-        cards.forEach(card => card.classList.add('secondary'));
+function handleMobileMenuScrollBehavior() {
+  let prevScrollpos = window.scrollY;
+
+  window.onscroll = () => {
+    let currentScrollPos = window.scrollY;
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById('mainHeader').style.top = '0';
+    } else {
+      if (currentScrollPos > 40 && !menuIcon.classList.contains('triggered')) {
+        document.getElementById('mainHeader').style.top = '-80px';
       }
-      showColumnCatalogList.classList.remove('active');
-      showInlineCatalogList.classList.add('active');
-      showInlineCatalogList.setAttribute('aria-pressed', 'true');
-      showColumnCatalogList.setAttribute('aria-pressed', 'false');
-    };
-  }
+    }
+    prevScrollpos = currentScrollPos;
+  };
 }
-this.handleInLineCatalogList();
+handleMobileMenuScrollBehavior();
 
-function handleColumnCatalogList() {
-  if (showColumnCatalogList) {
-    showColumnCatalogList.onclick = e => {
-      if (cards) {
-        cards.forEach(card => card.classList.remove('secondary'));
-        e;
-      }
-      showInlineCatalogList.classList.remove('active');
-      showColumnCatalogList.classList.add('active');
-      showColumnCatalogList.setAttribute('aria-pressed', 'true');
-      showInlineCatalogList.setAttribute('aria-pressed', 'false');
-    };
-  }
+function handleEmailSubscribeField() {
+  const subscribe = document.getElementById('subscribe');
+
+  if (!subscribe) return;
+
+  subscribe.onclick = e => {
+    return;
+  };
 }
-this.handleColumnCatalogList();
+handleEmailSubscribeField();

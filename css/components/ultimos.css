@@ -7,7 +7,9 @@ section.ultimos .headline {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   margin-bottom: 3.2rem;
+  gap: 16px;
 }
 
 section.ultimos .headline h1 {
@@ -207,5 +209,33 @@ section.ultimos .wrapper-container .bullet-container span.active {
   section.ultimos .wrapper-container .wrapper-slider .card {
     min-width: 99%;
     margin: 0 10px 0 0;
+  }
+
+  main.main section.ultimos .headline {
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  main.main section.ultimos .headline .ultimos-section-actions {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+@media screen and (max-width: 574px) {
+  main.main-car-page section.ultimos .headline {
+    justify-content: center;
+  }
+
+  main.main-car-page section.ultimos .headline h1 {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  main.main-car-page section.ultimos .headline h1 {
+    margin-right: 0;
+    text-align: center;
   }
 }

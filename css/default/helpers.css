@@ -233,3 +233,65 @@
   position: relative;
 }
 /* STYLED-TOGGLE */
+
+/* MENU ICON - HAMBURGUER ICON */
+#menuIcon #menuIconCheckbox {
+  display: none;
+}
+
+#menuIcon.hamburguer {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#menuIcon.hamburguer:hover .line {
+  background-color: var(--color-primary);
+}
+
+#menuIcon.hamburguer .line {
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-white);
+  -webkit-transition: transform 0.25s, opacity 0.35s, background-color 0.25s;
+  -moz-transition: transform 0.25s, opacity 0.35s, background-color 0.25s;
+  -o-transition: transform 0.25s, opacity 0.35s, background-color 0.25s;
+  transition: transform 0.25s, opacity 0.35s, background-color 0.25s;
+}
+
+#menuIcon.hamburguer .line--top {
+  transform: translateY(-7px);
+}
+
+#menuIcon.hamburguer .line--bottom {
+  transform: translateY(7px);
+}
+
+#menuIcon.hamburguer.triggered {
+  position: fixed;
+  right: 24px;
+}
+
+#menuIcon.hamburguer.triggered .line {
+  background-color: var(--color-primary);
+}
+
+#menuIcon.hamburguer.triggered .line--top {
+  transform: rotate(45deg);
+}
+
+#menuIcon.hamburguer.triggered .line--middle {
+  transform: translateX(16px);
+  opacity: 0;
+}
+
+#menuIcon.hamburguer.triggered .line--bottom {
+  transform: rotate(-45deg);
+}
+
+/* MENU ICON - HAMBURGUER ICON */

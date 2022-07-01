@@ -8,6 +8,8 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
 .types-section--link {
@@ -114,4 +116,52 @@ img.types-section--img {
   font-weight: var(--font-weight-bold);
   margin-top: 20px;
   cursor: default;
+}
+
+@media screen and (max-width: 568px) {
+  main.main .types-section .types-section--container {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 16px;
+  }
+
+  main.main .types-section .types-section--container .types-section--card {
+    margin-bottom: 16px;
+    min-width: 200px;
+    min-height: 130px;
+  }
+
+  main.main .types-section .types-section--container .types-section--card .types-section--a span {
+    margin-top: 16px;
+  }
+
+  main.main .types-section .types-section--container::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  main.main .types-section .types-section--container:hover::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  main.main .types-section .types-section--container::-webkit-scrollbar-track {
+    background: var(--color-white-150);
+    border-radius: 20px;
+  }
+
+  main.main .types-section .types-section--container::-webkit-scrollbar-thumb {
+    background-color: var(--color-white);
+    border-radius: 20px;
+    border: 3px solid var(--color-white);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  main.main .types-section .types-section--header {
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+  }
 }

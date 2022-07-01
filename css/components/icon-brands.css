@@ -11,10 +11,10 @@
 .icon-brand {
   display: block;
   content: '';
-  width: 86px;
-  height: 48px;
+  min-width: 86px;
+  min-height: 48px;
   opacity: 40%;
-  transition: 0.5s;
+  transition: opacity 0.5s;
 }
 
 .icon-brand:hover {
@@ -68,4 +68,38 @@
 
 .icon-mitsubishi {
   background: url(../../assets/icons/mitsubishi.svg) 0 0 no-repeat;
+}
+
+@media screen and (max-width: 260px) {
+  .icon-brand-section div {
+    flex-direction: row;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+
+  .icon-brand-section div::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .icon-brand-section div:hover::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .icon-brand-section div::-webkit-scrollbar-track {
+    background: var(--color-white-150);
+    border-radius: 20px;
+  }
+
+  .icon-brand-section div::-webkit-scrollbar-thumb {
+    background-color: var(--color-white);
+    border-radius: 20px;
+    border: 3px solid var(--color-white);
+  }
+
+  .icon-brand-section div .icon-brand {
+    margin-bottom: 36px;
+  }
 }

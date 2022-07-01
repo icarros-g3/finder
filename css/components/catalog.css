@@ -1,6 +1,6 @@
 section.catalogo {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   max-width: 966px;
   width: 100%;
@@ -38,6 +38,7 @@ section.catalogo section.footer-catalogo {
   min-height: 44px;
   flex-wrap: wrap;
   margin-top: 32px;
+  gap: 16px;
 }
 
 section.catalogo section.footer-catalogo .sorting-compare {
@@ -121,8 +122,7 @@ section.catalogo section.footer-catalogo .sorting-compare .sorting .sorting__wra
 
 section.catalogo section.footer-catalogo .sorting-compare .sorting .sorting__wrapper--select select {
   appearance: none;
-  background-color: transparent;
-  padding: 6px 16px 7px 16px;
+  padding: 6px 36px 7px 16px;
   margin: 0;
   min-width: 180px;
   max-width: 180px;
@@ -299,4 +299,75 @@ section.catalogo section.footer-catalogo .pagination-container .pagination .pagi
 
 section.catalogo section.footer-catalogo .pagination-container .pagination .pagination__item:last-of-type .pagination__link .pagination-icon--chevron {
   transform: rotate(270deg);
+}
+
+@media only screen and (max-width: 768px) {
+  section.catalogo section.footer-catalogo .sorting-compare {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  section.catalogo section.footer-catalogo {
+    align-items: flex-start;
+  }
+
+  section.catalogo section.footer-catalogo .sorting-compare .sorting::after {
+    display: none;
+  }
+
+  section.catalogo section.footer-catalogo .sorting-compare .compare,
+  section.catalogo section.footer-catalogo .pagination-container {
+    min-height: 44px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  section.catalogo section.footer-catalogo {
+    position: relative;
+  }
+
+  section.catalogo section.footer-catalogo .pagination-container {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 456px) {
+  section.catalogo section.footer-catalogo .sorting-compare {
+    flex: 1 1 auto;
+  }
+  section.catalogo section.footer-catalogo .sorting-compare .sorting {
+    width: 100%;
+  }
+  section.catalogo section.footer-catalogo .sorting-compare .sorting .sorting__wrapper--select select {
+    max-width: 100%;
+    min-width: 0;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  section.catalogo section.footer-catalogo {
+    flex-direction: column;
+  }
+
+  section.catalogo section.footer-catalogo .pagination-container {
+    position: static;
+    margin: 0 auto;
+  }
+
+  section.catalogo section.footer-catalogo .sorting-compare .sorting {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  section.catalogo section.footer-catalogo .sorting-compare {
+    align-items: center;
+    width: 100%;
+  }
+
+  section.catalogo section.footer-catalogo .sorting-compare .sorting .sorting__wrapper--select {
+    width: 100%;
+  }
 }

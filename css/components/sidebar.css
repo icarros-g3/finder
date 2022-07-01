@@ -5,14 +5,80 @@
   margin: 32px auto 80px auto;
 }
 
+.main-catalog .sidebar-overlay {
+  max-width: 100%;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  background-color: var(--color-gray-900-95);
+  overflow: hidden;
+  pointer-events: all;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  margin-right: 0;
+  overflow-y: auto;
+}
+
+.main-catalog .sidebar-button--close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.main-catalog .sidebar-button--close .line {
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-primary);
+}
+
+.main-catalog .sidebar-button--close .line.line--top {
+  transform: rotate(45deg);
+}
+
+.main-catalog .sidebar-button--close .line.line--bottom {
+  transform: rotate(-45deg);
+}
+
+.main-catalog .sidebar .sidebar-button--close {
+  display: none;
+}
+
+.main-catalog .sidebar-overlay .sidebar-button--close {
+  display: flex;
+}
+
 .main-catalog .sidebar {
-  max-width: 290px;
+  max-width: 22.38%; /* (290px / 1296 (width)) * 100 */
   width: 100%;
   flex-direction: column;
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
   margin-right: 40px;
+}
+
+.main-catalog .sidebar.show {
+  left: 0;
+}
+
+.main-catalog .sidebar-overlay.show {
+  opacity: 1;
+  visibility: visible;
 }
 
 .main-catalog .sidebar .actions-btn-wrapper,
@@ -156,7 +222,7 @@
 .main-catalog .sidebar .sidebar-form .sidebar-form__content .sidebar-form__fieldset .sidebar-form__input--number {
   width: 100%;
   flex: 1 1 100%;
-  padding: 9px 17px;
+  padding: 9px 17px 9px 17px;
   background: var(--color-white-040);
   border: 1px solid var(--color-white-120);
   border-radius: 8px;
@@ -166,6 +232,10 @@
   color: var(--color-white);
   appearance: none;
   z-index: 1;
+}
+
+.main-catalog .sidebar .sidebar-form .sidebar-form__content .sidebar-form__fieldset .sidebar-form__select {
+  padding: 9px 37px 9px 17px;
 }
 
 .main-catalog .sidebar .sidebar-form .sidebar-form__content .sidebar-form__fieldset .sidebar-form__select[disabled] {
@@ -196,7 +266,15 @@
   width: 3px;
 }
 
+.main-catalog .sidebar::-webkit-scrollbar {
+  width: 3px;
+}
+
 .main-catalog .sidebar .sidebar-form .sidebar-form__content .sidebar-form__fieldset .sidebar-form__list:hover::-webkit-scrollbar {
+  width: 6px;
+}
+
+.main-catalog .sidebar::-webkit-scrollbar {
   width: 6px;
 }
 
@@ -205,7 +283,18 @@
   border-radius: 20px;
 }
 
+.main-catalog .sidebar::-webkit-scrollbar-track {
+  background: var(--color-white-150);
+  border-radius: 20px;
+}
+
 .main-catalog .sidebar .sidebar-form .sidebar-form__content .sidebar-form__fieldset .sidebar-form__list::-webkit-scrollbar-thumb {
+  background-color: var(--color-white);
+  border-radius: 20px;
+  border: 3px solid var(--color-white);
+}
+
+.main-catalog .sidebar::-webkit-scrollbar-thumb {
   background-color: var(--color-white);
   border-radius: 20px;
   border: 3px solid var(--color-white);
@@ -218,4 +307,113 @@
 
 .main-catalog .sidebar .sidebar-form .sidebar-form__content .sidebar-form__list .sidebar-form__item .styled-checkbox {
   justify-content: flex-start;
+}
+
+@media screen and (max-width: 1110px) {
+  .main-catalog .sidebar {
+    max-width: 20%;
+  }
+
+  .main-catalog .sidebar .sidebar-form .sidebar-form__content .sidebar-form__fieldset .sidebar-form__wrapper--row,
+  .main-catalog .sidebar .sidebar-form .sidebar-form__content .sidebar-form__fieldset .sidebar-form__input-wrapper {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .main-catalog .sidebar .sidebar-form .sidebar-form__content .sidebar-form__fieldset .sidebar-form__wrapper--select {
+    width: 100%;
+  }
+
+  .main-catalog .sidebar .sidebar-form .sidebar-form__content .sidebar-form__fieldset .sidebar-form__wrapper--row .sidebar-form__select.select-year,
+  .main-catalog .sidebar .sidebar-form .sidebar-form__content .sidebar-form__fieldset .sidebar-form__input-wrapper .sidebar-form__input--number {
+    max-width: 100%;
+  }
+
+  .main-catalog .sidebar .sidebar-form .sidebar-form__content .sidebar-form__fieldset .sidebar-form__wrapper--row .horizontal-divider,
+  .main-catalog .sidebar .sidebar-form .sidebar-form__content .sidebar-form__fieldset .sidebar-form__input-wrapper .horizontal-divider {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .main-catalog .sidebar {
+    max-width: 290px;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    left: -290px;
+    right: 0;
+    bottom: 0;
+    padding: 24px 20px;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    background-color: var(--color-gray-900);
+    overflow: hidden;
+    pointer-events: all;
+    transition: left 0.5s;
+    margin-right: 0;
+    overflow-y: auto;
+  }
+
+  .main-catalog .sidebar .sidebar-form .sidebar-form__content .sidebar-form__fieldset .sidebar-form__wrapper--row,
+  .main-catalog .sidebar .sidebar-form .sidebar-form__content .sidebar-form__fieldset .sidebar-form__input-wrapper {
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .main-catalog .sidebar .sidebar-form .sidebar-form__content .sidebar-form__fieldset .sidebar-form__wrapper--row .sidebar-form__select.select-year,
+  .main-catalog .sidebar .sidebar-form .sidebar-form__content .sidebar-form__fieldset .sidebar-form__input-wrapper .sidebar-form__input--number {
+    max-width: 129px;
+  }
+
+  .main-catalog .sidebar .sidebar-form .sidebar-form__content .sidebar-form__fieldset .sidebar-form__wrapper--row .horizontal-divider,
+  .main-catalog .sidebar .sidebar-form .sidebar-form__content .sidebar-form__fieldset .sidebar-form__input-wrapper .horizontal-divider {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .main-catalog .sidebar.show {
+    max-width: 100%;
+  }
+
+  .main-catalog .sidebar .sidebar-button--close {
+    display: flex;
+    top: 26px;
+  }
+
+  .main-catalog .sidebar-overlay .sidebar-button--close {
+    display: none;
+  }
+
+  .main-catalog .sidebar .sidebar-form .sidebar-form__content .sidebar-form__fieldset .sidebar-form__list,
+  .main-catalog .sidebar .sidebar-form .sidebar-form__content .sidebar-form__fieldset .sidebar-form__wrapper--row .sidebar-form__select.select-year,
+  .main-catalog .sidebar .sidebar-form .sidebar-form__content .sidebar-form__fieldset .sidebar-form__input-wrapper .sidebar-form__input--number {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .main-catalog .sidebar .sidebar-form .sidebar-form__content .sidebar-form__fieldset .sidebar-form__wrapper--row,
+  .main-catalog .sidebar .sidebar-form .sidebar-form__content .sidebar-form__fieldset .sidebar-form__input-wrapper {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .main-catalog .sidebar .sidebar-form .sidebar-form__content .sidebar-form__fieldset .sidebar-form__wrapper--select {
+    width: 100%;
+  }
+
+  .main-catalog .sidebar .sidebar-form .sidebar-form__content .sidebar-form__fieldset .sidebar-form__wrapper--row .sidebar-form__select.select-year,
+  .main-catalog .sidebar .sidebar-form .sidebar-form__content .sidebar-form__fieldset .sidebar-form__input-wrapper .sidebar-form__input--number {
+    max-width: 100%;
+  }
+
+  .main-catalog .sidebar .sidebar-form .sidebar-form__content .sidebar-form__fieldset .sidebar-form__wrapper--row .horizontal-divider,
+  .main-catalog .sidebar .sidebar-form .sidebar-form__content .sidebar-form__fieldset .sidebar-form__input-wrapper .horizontal-divider {
+    display: none;
+  }
 }

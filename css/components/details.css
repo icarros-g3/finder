@@ -7,6 +7,7 @@
 .details-header {
   padding: 0;
   margin-bottom: 72px;
+  gap: 16px;
 }
 
 .details-header h1 {
@@ -119,11 +120,11 @@
 }
 
 .details-left {
-  margin-right: 122px;
+  margin-right: 9.42%; /* ((122px + 122px) / 1296) * 100 */
 }
 
 .details-right {
-  margin-left: 122px;
+  margin-left: 9.42%; /* ((122px + 122px) / 1296) * 100 */
 }
 
 .details--card {
@@ -178,4 +179,122 @@
   position: relative;
   top: -10px;
   width: 2px;
+}
+
+@media screen and (max-width: 1090px) {
+  main.main section.details-section .details-container {
+    margin-top: 72px;
+  }
+
+  main.main section.details-section .details-container .details .details--card {
+    width: 350px;
+  }
+
+  main.main section.details-section .details-container .details--centered-car {
+    position: absolute;
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-90deg);
+  }
+}
+
+@media screen and (max-width: 930px) {
+  main.main section.details-section .details-container .details .details--card {
+    width: 275px;
+  }
+}
+
+@media screen and (max-width: 742px) {
+  main.main section.details-section .details-container .details.details-left {
+    margin-right: 5%;
+  }
+  main.main section.details-section .details-container .details.details-right {
+    margin-left: 5%;
+  }
+}
+
+@media screen and (max-width: 710px) {
+  main.main section.details-section .details-header {
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  main.main section.details-section .details-container .details--centered-car {
+    top: -120px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  main.main section.details-section .details-container .details.details-left {
+    margin-right: 2%;
+  }
+  main.main section.details-section .details-container .details.details-right {
+    margin-left: 2%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  main.main section.details-section .details-header {
+    margin-bottom: 102px;
+  }
+
+  main.main section.details-section .details-container {
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 102px;
+  }
+
+  main.main section.details-section .details-container .details--centered-car {
+    top: -80px;
+  }
+
+  main.main section.details-section .details-container .details--centered-car .auto-car {
+    transform: translateY(100%);
+  }
+
+  main.main section.details-section .details-container .details--centered-car .road-line {
+    transform: translateY(-20%);
+  }
+
+  main.main section.details-section .details-container .details.details-left {
+    margin-right: 0;
+  }
+  main.main section.details-section .details-container .details.details-right {
+    margin-left: 0;
+  }
+
+  main.main section.details-section .details-container,
+  main.main section.details-section .details-container .details {
+    gap: 64px;
+  }
+
+  main.main section.details-section .details-container .details {
+    align-items: center;
+    justify-content: center;
+  }
+
+  main.main section.details-section .details-container .details .details--card {
+    width: 100%;
+    max-width: 416px;
+    padding: 0 10px;
+  }
+}
+@media screen and (max-width: 540px) {
+  main.main section.details-section .details-container .details--centered-car .road-line {
+    visibility: hidden;
+    display: none;
+  }
+
+  main.main section.details-section .details-container .details--centered-car .auto-car {
+    transform: none;
+    right: 173px;
+    top: 4px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  main.main section.details-section .details-container .details--centered-car {
+    top: -45px;
+  }
 }
