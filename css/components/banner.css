@@ -37,3 +37,43 @@
 .main .banner .banner-image .image-container img {
   width: 100%;
 }
+
+@media screen and (max-width: 1000px) {
+  .main .banner {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 24px;
+  }
+
+  .main .banner .banner-info {
+    margin-right: 0;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .main .banner .banner-info h1 {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 18px;
+  }
+
+  .main .banner .banner-info h2 {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .main .banner .banner-image {
+    max-width: 430px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .main .banner .banner-info h1 {
+    font-size: var(--font-size-h1);
+    line-height: var(--line-height-h1);
+  }
+}

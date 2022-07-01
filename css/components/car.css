@@ -1,5 +1,3 @@
-@import url(../default/vars.css);
-
 .car-header {
   width: 100%;
   display: flex;
@@ -15,16 +13,16 @@
 
 .car-header .card-header-wrapper > div {
   align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
-.car-header h3 {
+.car-header h1 {
   color: var(--color-white);
   font-size: var(--font-size-h3);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-h3);
   text-align: left;
-  max-height: 36px;
-  margin-right: 24px;
 }
 
 .car-header .breadcrumbs {
@@ -36,7 +34,7 @@
   align-items: center;
   padding: 0px;
   gap: 8px;
-  height: 21px;
+  flex-wrap: wrap;
 }
 
 .car-header .breadcrumbs .breadcrumb .breadcrumb-item {
@@ -193,13 +191,36 @@
 
 .content-wrapper .content .previews {
   display: flex;
-  justify-content: center;
   max-width: 746px;
   width: 100%;
   border-radius: 0px;
   margin: 16px 0 40px 0;
-  flex-wrap: wrap;
   gap: 16px;
+  flex-direction: row;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.content-wrapper .content .previews::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.content-wrapper .content .previews:hover::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.content-wrapper .content .previews::-webkit-scrollbar-track {
+  background: var(--color-white-150);
+  border-radius: 20px;
+}
+
+.content-wrapper .content .previews::-webkit-scrollbar-thumb {
+  background-color: var(--color-white);
+  border-radius: 20px;
+  border: 3px solid var(--color-white);
 }
 
 .content-wrapper .content .previews img {
@@ -211,6 +232,16 @@
   transition: 0.3s;
 }
 
+.content-wrapper .content .previews .video-preview,
+.content-wrapper .content .previews img {
+  flex: 1 1 100%;
+  max-width: 136px;
+  border-radius: 8px;
+  width: 100%;
+  max-height: 100px;
+  margin-bottom: 16px;
+}
+
 .content-wrapper .content .previews .video-preview {
   display: flex;
   background-color: var(--color-white-040);
@@ -219,15 +250,7 @@
   justify-content: center;
   height: 100px;
   cursor: pointer;
-}
-
-.content-wrapper .content .previews .video-preview,
-.content-wrapper .content .previews img {
-  flex: 1 1 100%;
-  max-width: 136px;
-  border-radius: 8px;
-  width: 100%;
-  max-height: 100px;
+  flex-shrink: 0;
 }
 
 .content-wrapper .content .previews .video-preview:hover {
@@ -297,6 +320,9 @@
 }
 
 .content-wrapper .content .sidebar {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
   max-width: 526px;
   width: 100%;
   color: var(--color-white);
@@ -318,7 +344,6 @@
   font: inherit;
   cursor: pointer;
   outline: inherit;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -410,6 +435,10 @@
   margin: 32px 0;
 }
 
+.content-wrapper .content .sidebar .author .info .info-actions {
+  margin-top: 32px;
+}
+
 .content-wrapper .content .sidebar .author .basic {
   display: flex;
   justify-content: start;
@@ -428,12 +457,20 @@
   margin: 8px 0 16px 0;
 }
 
+.content-wrapper .content .sidebar .author .info .basic > div {
+  max-width: 85%;
+}
+
 .content-wrapper .content .sidebar .author .info .basic > div > h1 {
   font-size: var(--font-size-h5);
   line-height: var(--line-height-h5);
   font-weight: var(--font-weight-bold);
   color: var(--color-white);
   margin-bottom: 4px;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .content-wrapper .content .sidebar .author .info .basic .reviews {
@@ -524,7 +561,7 @@
   border: 1px solid var(--color-white);
   background: var(--color-blue-900);
   color: var(--color-white);
-  margin-top: 32px;
+
   -webkit-transition: color 0.2s ease-in, background 0.2s ease-in;
   -moz-transition: color 0.2s ease-in, background 0.2s ease-in;
   -o-transition: color 0.2s ease-in, background 0.2s ease-in;
@@ -689,6 +726,12 @@
   height: auto;
 }
 
+main.main-car-page .content-wrapper .content .wrapper,
+main.main-car-page .content-wrapper .content .wrapper .slider-gallery,
+main.main-car-page .content-wrapper .content .wrapper .slider-gallery img {
+  border-radius: none;
+}
+
 .content-wrapper .content .wrapper .slider-gallery {
   max-width: 746px;
   max-height: 420px;
@@ -703,9 +746,42 @@
   max-height: 420px;
 }
 
+main.main-car-page .content-wrapper .content .wrapper .slider-gallery img {
+  display: none;
+  max-height: 420px;
+  position: absolute;
+  top: 0;
+  top: 50%;
+  left: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  transform: translateY(-50%);
+}
+
+main.main-car-page .content-wrapper .content .wrapper .slider-gallery {
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+}
+
 .content-wrapper .content .wrapper .slider-gallery img.show {
   display: block;
   object-fit: cover;
+}
+
+main.main-car-page .content-wrapper .content .wrapper .slider-gallery img.show {
+  position: absolute;
+  left: 0;
+  right: 0;
+  left: 0;
+
+  display: block;
+  object-fit: cover;
+  border-radius: 0;
 }
 
 .content-wrapper .content .wrapper .icons .wishlist {
@@ -814,6 +890,8 @@
 
 .content-wrapper .content .sidebar .subscribe .styled-checkbox span {
   color: var(--color-white-700);
+  text-overflow: initial;
+  white-space: initial;
 }
 
 .main-car-page section.ultimos {
@@ -870,4 +948,116 @@
   -moz-transition: color 0.2s ease-in, background-color 0.2s ease-in;
   -o-transition: color 0.2s ease-in, background-color 0.2s ease-in;
   transition: color 0.2s ease-in, background-color 0.2s ease-in;
+}
+
+@media screen and (max-width: 1134px) {
+  .content-wrapper .content .sidebar {
+    max-width: 746px;
+    width: 100%;
+    margin-top: 51px;
+    text-align: left;
+    margin-left: 0;
+    flex: 1 1 auto;
+  }
+
+  .content-wrapper .content .sidebar h1 {
+    text-align: center;
+  }
+
+  .content-wrapper .content .sidebar .meta {
+    margin: 0 auto;
+  }
+
+  .content-wrapper .content .sidebar .author .info {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: space-between;
+  }
+
+  .content-wrapper .content .sidebar .author .info .info-wrapper {
+    max-width: 67%;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+  }
+
+  .content-wrapper .content .sidebar .author .info .info-actions {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    justify-content: space-between;
+    flex: 1 1 auto;
+    align-items: flex-end;
+  }
+
+  .content-wrapper .content .sidebar .author .info .info-actions button.primary {
+    margin-top: 0;
+  }
+
+  .content-wrapper .content .sidebar .subscribe .styled-checkbox {
+    justify-content: flex-start;
+  }
+
+  .content-wrapper .content .specifications h1,
+  .content-wrapper .content .specifications ul li {
+    text-align: center;
+  }
+
+  .main-car-page section.car-ad-description {
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .content-wrapper .content .sidebar .author .info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .content-wrapper .content .sidebar .author .info .info-wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .content-wrapper .content .sidebar .author .info .basic > div {
+    max-width: 90%;
+  }
+
+  .content-wrapper .content .sidebar .author .info .info-actions {
+    margin-top: 32px;
+  }
+
+  .content-wrapper .content .sidebar .author .info .info-actions button:not(:first-of-type) {
+    margin-top: 16px;
+  }
+}
+
+@media screen and (max-width: 574px) {
+  .main-car-page section.ultimos .headline .floating-link {
+    margin-top: 8px;
+  }
+}
+
+@media screen and (max-width: 504px) {
+  .content-wrapper .content .previews {
+    margin-bottom: 62px;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .main-car-page section.car-ad-description .car-ad-footer {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .main-car-page section.car-ad-description .car-ad-footer .icon-divider {
+    width: 100%;
+    transform: rotate(180deg);
+  }
+}
+
+@media screen and (max-width: 352px) {
+  .content-wrapper .content .previews {
+    margin-bottom: 96px;
+  }
 }

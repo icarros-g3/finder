@@ -71,6 +71,7 @@
 
     <!-- Importação de arquivo javascript -->
     <script defer src="./js/index.js"></script>
+    <script defer src="./js/catalog.js"></script>
 
     <link rel="icon" type="image/jpeg" href="./assets/icons/logo-icon.svg" />
     <link rel="stylesheet" href="./css/style.css" />
@@ -85,13 +86,14 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <!-- HEADER -->
-    <header class="header center-page-content center-content">
+    <header class="header center-page-content center-content" id="mainHeader">
       <a href="#" class="logo-container">
         <img src="./assets/icons/logo.svg" alt="Finder logo" width="116px" height="32px" />
       </a>
 
-      <nav class="navbar" aria-label="Main Menu" role="navigation">
-        <ul class="navbar-list">
+      <!-- DESKTOP NAV -->
+      <nav class="navbar" aria-label="Main Menu" role="navigation" id="desktopNav">
+        <ul class="navbar-list" id="desktopNavList">
           <li class="navbar-item">
             <a href="#novos" class="navbar-link">Novos</a>
           </li>
@@ -120,13 +122,79 @@
           </a>
         </div>
       </nav>
+      <!-- DESKTOP NAV -->
+
+      <!-- MOBILE NAV -->
+      <nav class="navbar" aria-label="Main Menu" role="navigation" id="mobileNav">
+        <!-- <label for="menuIconCheckbox" class="hamburguer" id="menuIcon" role="button" aria-label="Menu Icon">
+          <input type="checkbox" id="menuIconCheckbox" />
+          <span class="line line--top"></span>
+          <span class="line line--middle"></span>
+          <span class="line line--bottom"></span>
+        </label> -->
+
+        <div class="overlay-content">
+          <ul class="navbar-list" id="mobileNavList">
+            <li class="navbar-item">
+              <a href="#entrar" class="navbar-link">Entrar</a>
+            </li>
+            <li class="navbar-item">
+              <a href="#novos" class="navbar-link">Novos</a>
+            </li>
+            <li class="navbar-item">
+              <a href="#usados" class="navbar-link">Usados</a>
+            </li>
+            <li class="navbar-item">
+              <a href="#vender" class="navbar-link">Vender</a>
+            </li>
+            <li class="navbar-item">
+              <a href="#comprar" class="navbar-link">Comprar</a>
+            </li>
+            <li class="navbar-item">
+              <a href="#novidades" class="navbar-link">Novidades e Reviews</a>
+            </li>
+          </ul>
+
+          <!-- <div class="navbar-actions center-content">
+            <a href="#entrar" class="navbar-link">
+              <i class="icon user--icon"></i>
+              <span>Entrar</span>
+            </a>
+            <a href="#vender" class="navbar-link navbar-btn" role="button" aria-label="Vender">
+              <i class="icon plus--icon"></i>
+              <span>Vender</span>
+            </a>
+          </div> -->
+        </div>
+      </nav>
+
+      <label for="menuIconCheckbox" class="hamburguer" id="menuIcon" role="button" aria-label="Menu" aria-pressed="false">
+        <span class="line line--top"></span>
+        <span class="line line--middle"></span>
+        <span class="line line--bottom"></span>
+      </label>
+      <!-- MOBILE NAV -->
     </header>
     <!-- / HEADER -->
 
     <!-- MAIN -->
     <main class="main-catalog center-page-content">
       <!-- SIDEBAR -->
-      <aside class="sidebar" aria-label="Filtros de pesquisa">
+      <div class="sidebar-overlay" id="sidebar-overlay">
+        <!-- <button class="sidebar-overlay-button" id="sidebar-overlay-button" type="button" aria-label="Fechar lista de filtros">X</button> -->
+
+        <label class="sidebar-button--close" type="button" role="button" aria-label="Fechar lista de filtros" aria-pressed="false">
+          <span class="line line--top"></span>
+          <span class="line line--bottom"></span>
+        </label>
+      </div>
+
+      <aside class="sidebar" id="sidebar" aria-label="Filtros de pesquisa">
+        <label class="sidebar-button--close" type="button" role="button" aria-label="Fechar lista de filtros" aria-pressed="false">
+          <span class="line line--top"></span>
+          <span class="line line--bottom"></span>
+        </label>
+
         <div class="actions-btn-wrapper">
           <span class="styled-new-btn--toggle" role="button" aria-pressed="false">
             <label for="new">
@@ -313,12 +381,19 @@
 
               <div class="sidebar-form__input-wrapper">
                 <label class="visually-hidden" for="starting-price">Preço Inicial</label>
-                <input class="sidebar-form__input--number" type="number" id="starting-price" name="starting-price" min="0" value="10.000" />
+                <input
+                  class="sidebar-form__input--number"
+                  type="number"
+                  id="starting-price"
+                  name="starting-price"
+                  min="0"
+                  value="10.000"
+                  placeholder="Mínimo" />
 
                 <span class="horizontal-divider"></span>
 
                 <label class="visually-hidden" for="ending-price">Preço Final</label>
-                <input class="sidebar-form__input--number" type="number" id="ending-price" name="ending-price" min="0" value="50.000" />
+                <input class="sidebar-form__input--number" type="number" id="ending-price" name="ending-price" min="0" value="50.000" placeholder="Máximo" />
               </div>
 
               <div class="sidebar-form__toggle">
@@ -616,9 +691,18 @@
                 </div>
               </div>
 
-              <div class="view">
-                <i class="list--icon" role="button" aria-label="Exibir em linhas" aria-pressed="false" id="show-inline"></i>
-                <i class="grid--icon active" role="button" aria-label="Exibir em colunas" aria-pressed="true" id="show-column"></i>
+              <div class="actions--view">
+                <button class="filter-btn" id="filter-btn" type="button" aria-label="Mostrar filtros">
+                  <i class="filter-btn--icon"></i>
+                  <span class="filter-btn--text">Filtros</span>
+                </button>
+
+                <div class="divider"></div>
+
+                <div class="view">
+                  <i class="list--icon" role="button" aria-label="Exibir em linhas" aria-pressed="false" id="show-inline"></i>
+                  <i class="grid--icon active" role="button" aria-label="Exibir em colunas" aria-pressed="true" id="show-column"></i>
+                </div>
               </div>
             </div>
           </div>

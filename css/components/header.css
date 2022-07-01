@@ -1,5 +1,12 @@
 /********** HEADER **********/
+#mobileNav,
+#menuIcon.hamburguer {
+  display: none;
+}
+
 .header {
+  position: relative;
+  z-index: 10;
   min-height: 80px;
   display: flex;
   align-items: center;
@@ -10,6 +17,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  z-index: 10;
 }
 
 .header .logo-container img {
@@ -123,4 +131,106 @@
 .header .navbar .navbar-actions .navbar-btn:hover {
   color: var(--color-primary);
   background-color: var(--color-white);
+}
+
+/* MOBILE NAV */
+#mobileNav .navbar-list-container {
+  display: none;
+}
+
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 100%;
+  width: 100%;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: var(--color-gray-900); /* Black fallback color */
+  background-color: var(--color-gray-900-95); /* Black w/opacity */
+  overflow: hidden;
+  pointer-events: all;
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+.overlay #menuIcon.hamburguer {
+  position: absolute;
+  top: 20px;
+  right: 44px; /* 24px page padding + 20px icon padding-right */
+  right: 24px;
+  z-index: 10;
+}
+
+.overlay-content {
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+/* Position the content inside the overlay */
+.overlay .overlay-content {
+  position: relative;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.overlay .overlay-content .navbar-list {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.overlay .overlay-content .navbar-list::before {
+  display: none;
+}
+
+.overlay .overlay-content .navbar-list .navbar-item {
+  margin-left: 0;
+  padding: 8px;
+  width: 100%;
+  display: block;
+  padding: 0;
+}
+
+.overlay .overlay-content .navbar-list .navbar-item .navbar-link {
+  justify-content: center;
+  align-items: center;
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-h1);
+  padding: 8px;
+}
+/* MOBILE NAV */
+
+@media screen and (max-width: 1000px) {
+  #desktopNav {
+    display: none;
+  }
+
+  #mobileNav,
+  #menuIcon.hamburguer {
+    display: flex;
+  }
+
+  #mobileNav.navbar {
+    pointer-events: none;
+  }
+
+  #mobileNav.navbar.overlay {
+    pointer-events: all;
+  }
+
+  .header {
+    position: sticky;
+    top: 0;
+    justify-content: space-between;
+    background-color: var(--color-gray-900-95);
+    -webkit-transition: top 0.5s;
+    -moz-transition: top 0.5s;
+    -o-transition: top 0.5s;
+    transition: top 0.5s;
+  }
 }

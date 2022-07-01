@@ -115,6 +115,7 @@
 
 .wrapper .slider img.show {
   display: block;
+  max-height: 263px;
 }
 
 .wrapper .icons .wishlist {

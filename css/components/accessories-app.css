@@ -386,3 +386,72 @@
 .rotate {
   transform: rotate(180deg);
 }
+
+@media screen and (max-width: 1025px) {
+  main.main section.app-section {
+    flex-wrap: wrap;
+    gap: 56px;
+    justify-content: center;
+  }
+
+  main.main section.app-section .app-download {
+    text-align: center;
+    max-width: 60rem;
+  }
+
+  main.main section.app-section .app-download .app-stores {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  main.main section.accessories-section {
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  main.main section.accessories-section .accessories {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  main.main section.accessories-section .article-content {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  main.main section.accessories-section .car-parts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main.main section.app-section article.wrapper-phone .phone--car {
+    right: initial;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  main.main section.accessories-section {
+    gap: 48px;
+  }
+
+  main.main section.accessories-section .car-parts {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    max-width: 17rem;
+  }
+
+  main.main section.accessories-section .accessories {
+    white-space: nowrap;
+  }
+
+  main.main section.app-section .wrapper-phone {
+    display: none;
+  }
+}
