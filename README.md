@@ -1,10 +1,8 @@
 # Acelera iCarros Tech - Flavin do Pneu
 
-![Logo Equipe](readme-img/flavin.png)
+![Logo Equipe](https://user-images.githubusercontent.com/45228799/177657093-3a8432c5-8ef6-4467-b3f8-c10ded0eebb2.png)
 
-## Introdução
-
-
+## :computer: Introdução
 
 Projeto realizado durante o [<"acelera"><"iCarros_Tech">](https://aceleraicarrostech.corporate.gama.academy/), programa de aceleração feito em parceria de [Gama Academy](https://www.gama.academy/) e o [iCarros](https://www.icarros.com.br/principal/index.jsp).
 
@@ -15,31 +13,49 @@ O programa consiste em dois projetos, com base no protótipo passado no [figma](
 
 Este repositório contempla o projeto 1.
 
-## Andamento
+## :hammer: Desenvolvimento
 
-O trabalho foi divido em 13 partes, divididas nas três telas.
+As tarefas do trabalho foram dividas utilizando o GitHub Projects, sendo o total de 13 tarefas criadas para as 3 telas.
 
-### Trabalho final e unificado
+Cada tarefa era designada a um integrante do grupo, ficando responsável por desenvolver, atualizar e acompanhar a tarefa no Kanban do próprio Projects.
 
-![Barra de progresso](https://us-central1-progress-markdown.cloudfunctions.net/progress/0)
+## :wrench: Tecnologias
 
-### Branches individuais concluídas
+- Html
+- CSS
+- Javascript
+- [Prettier](https://prettier.io/)
 
-![Barra de progresso](https://us-central1-progress-markdown.cloudfunctions.net/progress/31)
+## :rocket: Como testar o projeto
 
-## Como testar o projeto
+```bash
+# Clone este repositório
+$ git clone https://github.com/icarros-g3/finder.git
 
-## Créditos
+# Acesse a pasta do projeto no terminal/cmd
+$ cd finder
 
-Projeto elaborado e planejado por:
+# Abra o arquivo index.html utilizando Live Server ou indo até a pasta e abrindo no navegador
+```
 
-- [Diego Sano](https://github.com/diegosano).
-- [Gloria Guazzini Porte](https://github.com/gloriaporte).
-- [Guilherme de Araujo Gabriel](https://github.com/guilhermag).
-- [Higor Eduardo Batista](https://github.com/bhigoreduardo).
-- [Yuri Cavalini](https://github.com/yuricavalini).
+## :art: Imagens
 
-### Materiais utilizados
+![image](https://user-images.githubusercontent.com/45228799/177660241-9cd22f4f-632c-43ba-9e58-f61c69456224.png)
+![image](https://user-images.githubusercontent.com/45228799/177660272-18e2c7a9-bd0b-42ea-a3b5-77fa1802edf8.png)
+![image](https://user-images.githubusercontent.com/45228799/177660287-238023fa-907e-4253-98fb-f19bb7158aea.png)
 
-- Protótipo com ícones, imagens e planos de fundo : [Gama Academy](https://www.gama.academy/).
-- Barra de progresso utilizada no README.md : [Gepser Hoil](https://github.com/gepser/markdown-progress).
+## :sparkles: Créditos
+
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/diegosano"><img style="border-radius: 50%;" src="https://github.com/diegosano.png" width="100px;" alt=" Diego's photo"/><sub><br /><b>Diego Sano</b></sub></a></td>
+    <td align="center"><a href="https://github.com/gloriaporte"><img style="border-radius: 50%;" src="https://github.com/gloriaporte.png" width="100px;" alt="Gloria's photo"/><br /><sub><b>Gloria Guazzini</b></sub></a></td>
+    <td align="center"><a href="https://github.com/guilhermag"><img style="border-radius: 50%;" src="https://github.com/guilhermag.png" width="100px;" alt="Guilherme's photo"/><br /><sub><b>Guilherme de Araujo</b></sub></a></td>
+    <td align="center"><a href="https://github.com/yuricavalini"><img style="border-radius: 50%;" src="https://github.com/yuricavalini.png" width="100px;" alt="Yuri's photo"/><br /><sub><b>Yuri Cavanlini</b></sub></a></td>
+    <td align="center"><a href="https://github.com/bhigoreduardo"><img style="border-radius: 50%;" src="https://github.com/bhigoreduardo.png" width="100px;" alt="Eduardo's photo"/><br /><sub><b>Eduardo Batista</b></sub></a></td>
+  </tr>
+</table>
+
+## :books: Materiais utilizados
+
+- Protótipo com ícones, imagens e planos de fundo : [Gama Academy](https://www.gama.academy/)
