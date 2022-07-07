@@ -4,7 +4,24 @@ const cards = document.querySelectorAll('#catalog-list .card');
 const showInlineCatalogList = document.getElementById('show-inline');
 const showColumnCatalogList = document.getElementById('show-column');
 const offersCounter = document.getElementById('offers-counter');
+console.warn(cards);
 
+function handleCatalogCardsLink() {
+  if (!cards) return;
+
+  cards.forEach(card =>
+    card.addEventListener('click', e => {
+      e.preventDefault();
+      let carUrl = new URL(`${window.location.origin}/car.html`);
+      console.warn(carUrl);
+      window.location.assign(carUrl);
+    }),
+  );
+}
+handleCatalogCardsLink();
+
+let carUrl = new URL(`${window.location.origin}/car.html`);
+console.warn(carUrl);
 function handleCountOffers() {
   if (offersCounter) {
     offersCounter.innerHTML = cards.length;
