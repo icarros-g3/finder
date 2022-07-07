@@ -13,6 +13,7 @@
   background-image: url(../../assets/images/banner-bg.svg);
   background-position: top;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 html {
